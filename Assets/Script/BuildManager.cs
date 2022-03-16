@@ -11,7 +11,7 @@ public class BuildManager : MonoBehaviour
     //Chercher un BuildManager Sur la scène 
     private void Awake()
     {
-        if(instance == null)
+        if(instance != null)
         {
             Debug.LogError("Il y a des déja un Build Manager dans la scène !!!");
         }
