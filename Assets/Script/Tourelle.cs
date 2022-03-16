@@ -12,6 +12,13 @@ public class Tourelle : MonoBehaviour
     public Transform partToRotate;
 
     public float turnSpeed = 10f;
+
+    public float FireRate = 1f;
+    private float fireCountdown = 0f ;
+
+    public GameObject BulletPrefab;
+    public Transform firePoint;
+
     //Lancer en boucle la fonctions Updatetarget
     void Start()
     {
@@ -66,6 +73,27 @@ public class Tourelle : MonoBehaviour
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, LookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
+        //Permet de tier
+        if(fireCountdown <=0f)
+        {
+            Shoot();
+            fireCountdown = 1 / FireRate;
+        }
+        //Permet de mettre du delay entre chaque tire
+        fireCountdown -= Time.deltaTime;
+
+        //Faire apparaitre la balle sur le cannon et la lancer sur l'énemi
+        void Shoot()
+        {
+            GameObject bulletGo = (GameObject)Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
+            Bullet bullet = bulletGo.GetComponent<Bullet>();
+            Debug.Log("tire");
+
+            if(bullet != null)
+            {
+                bullet.Seek(target);
+            }
+        }
     }
 
 

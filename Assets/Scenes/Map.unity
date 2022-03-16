@@ -1360,6 +1360,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -792560041209186313, guid: b337fd7617a5a534890e5d01e040c0e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 7031438077820601102, guid: d56e2056a3102464fb7582ea4806a64f, type: 3}
+    - target: {fileID: -792560041209186313, guid: b337fd7617a5a534890e5d01e040c0e8, type: 3}
       propertyPath: partToRotate
       value: 
       objectReference: {fileID: 2110238795}
@@ -33014,14 +33018,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -792560041209186313, guid: b337fd7617a5a534890e5d01e040c0e8, type: 3}
-      propertyPath: turnSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -792560041209186313, guid: b337fd7617a5a534890e5d01e040c0e8, type: 3}
-      propertyPath: partToRotate
-      value: 
-      objectReference: {fileID: 2013970237}
     - target: {fileID: 2416798229619542885, guid: b337fd7617a5a534890e5d01e040c0e8, type: 3}
       propertyPath: m_Name
       value: Turret
@@ -34454,11 +34450,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f181c70c186d104ea820493cf470ad5, type: 3}
---- !u!4 &2013970237 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5802568820752547209, guid: b337fd7617a5a534890e5d01e040c0e8, type: 3}
-  m_PrefabInstance: {fileID: 1932156890}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2014408761
 PrefabInstance:
   m_ObjectHideFlags: 0
