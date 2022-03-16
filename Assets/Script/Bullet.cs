@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     //Fonction
+    public GameObject impactEffect;
     private Transform target;
     public float Speed = 70f;
 
@@ -35,8 +36,12 @@ public class Bullet : MonoBehaviour
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
+    //Qaund l'ennemis est toucher alors détroire le projectile et faire spawn les particules
     void HitTarget()
     {
+       GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 2f);
+        Destroy(target.gameObject);
         Destroy(gameObject);
     }
 }
