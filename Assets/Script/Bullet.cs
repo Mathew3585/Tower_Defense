@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     private Transform target;
     public float Speed = 70f;
 
+    public float explosionsRadius = 0f;
+
     //Chercher la target
     public void Seek(Transform _target)
     {
@@ -34,14 +36,49 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        transform.LookAt(target); 
     }
 
     //Qaund l'ennemis est toucher alors détroire le projectile et faire spawn les particules
     void HitTarget()
     {
        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 2f);
-        Destroy(target.gameObject);
+       Destroy(effectIns, 2f);
+
+        if(explosionsRadius > 0)
+        {
+            Explode();
+        }
+        else
+        {
+            Damage(target);
+        }
         Destroy(gameObject);
+    }
+
+    //Gerer les exposions
+    void Explode()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionsRadius);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.tag == "Enemy")
+            {
+                Damage(collider.transform);
+            }
+        }
+    }
+
+    //Gerer les dommage
+    void Damage(Transform enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
+
+    //Dessiner le Radius de l'explosion
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red; 
+        Gizmos.DrawWireSphere(transform.position, explosionsRadius);
     }
 }

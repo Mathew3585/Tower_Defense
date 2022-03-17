@@ -21,21 +21,42 @@ public class BuildManager : MonoBehaviour
 
     //Fonctions
     public GameObject StandarTurretPrefab;
+    public GameObject MissileLancherTurretPrefab;
 
+    private TourelleBleuprint turretToBluid;
 
-    private GameObject turretToBluid;
+    public GameObject ParticuleBuild;
+    public bool canBuild { get { return turretToBluid != null; } }
+    public bool hasMoney { get { return Player_Stat.money >= turretToBluid.cost; } }
 
-    private void Start()
+    //permettre de construire un tourelle
+    public void BuildTurretOn(Node node)
     {
-        turretToBluid = StandarTurretPrefab;
+
+        //Calculer l'argent du joueur 
+        if (Player_Stat.money < turretToBluid.cost)
+        {
+            Debug.Log("Pas assez d'argent !!!");
+            return;
+        }
+
+        Player_Stat.money -= turretToBluid.cost;
+
+       GameObject turret = (GameObject)Instantiate(turretToBluid.prefab, node.GetBuildPosition(), Quaternion.identity);
+       node.Turret = turret;
+
+        Debug.Log("Objet acheter  il vous reste : " + Player_Stat.money);
+
+        GameObject effect = (GameObject)Instantiate(ParticuleBuild, node.GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
     }
 
-    //Mettre tun tourelle
-    public GameObject GetTurretToBuild()
+    //Mettre un tourelle
+
+
+    public void SelectTurretToBuild(TourelleBleuprint turret)
     {
-        return turretToBluid;
+        turretToBluid = turret;
     }
-
-
 
 }

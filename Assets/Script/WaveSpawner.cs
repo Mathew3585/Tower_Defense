@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WaveSpawner: MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class WaveSpawner: MonoBehaviour
     [SerializeField]
     private Transform SpawnPoint;
     [SerializeField]
-    private Text waveCountdoawnTimer;
+    private TMP_Text waveCountdoawnTimer;
     [SerializeField]
     private float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    [SerializeField]
+    private float countdown = 5f;
     private int waveIndex = 0;
 
     void Update()
@@ -30,8 +32,11 @@ public class WaveSpawner: MonoBehaviour
         }
         //Chaque seconde qui passe on retire 1 à  countdown
         countdown -= Time.deltaTime;
+
         // modifer le text Countdown 
-        waveCountdoawnTimer.text = Mathf.Round(countdown).ToString();
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        waveCountdoawnTimer.text = string.Format("{0:00.00}", countdown);
     }
     
     //Lance la game
