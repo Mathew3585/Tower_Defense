@@ -8,13 +8,12 @@ public class Player_Stat : MonoBehaviour
     public static int money;
     public int startmoney = 400;
     public static int lives;
-    public int startLife = 20;
+    public int startLife = 100;
 
     public void Start()
     {
         money = startmoney;
         lives = startLife;
-
     }
 
 }

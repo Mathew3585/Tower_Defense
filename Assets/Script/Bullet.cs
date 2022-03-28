@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
     private Transform target;
     public float Speed = 70f;
+    public int damage = 50;
 
     public float explosionsRadius = 0f;
 
@@ -72,7 +73,15 @@ public class Bullet : MonoBehaviour
     //Gerer les dommage
     void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Ennemy e = enemy.GetComponent<Ennemy>();
+        if(e != null)
+        {
+            e.TakeDommage(damage);
+        }
+        else
+        {
+            Debug.LogError("Pas de script Enemy sur l'énemi.");
+        }
     }
 
     //Dessiner le Radius de l'explosion

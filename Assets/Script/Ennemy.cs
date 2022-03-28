@@ -8,6 +8,10 @@ public class Ennemy : MonoBehaviour
     public float speed = 10f;
     private Transform target;
     private int waypoinIndex = 0;
+    public int Health = 100;
+    public int value = 50;
+    public GameObject deadEffect;
+    Player_Stat Player;
 
     //trouver les target 
     void Start()
@@ -26,7 +30,27 @@ public class Ennemy : MonoBehaviour
             GetNextWaypoint();
         }
     }
+    //Permet de prendre des dégat
+    public void TakeDommage(int amount)
+    {
+        Health -= amount;
 
+        if(Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+
+        Player_Stat.money += value;
+
+        GameObject deathParticule = (GameObject)Instantiate(deadEffect, transform.position, Quaternion.identity);
+        Destroy(deathParticule, 2f);
+
+        Destroy(gameObject);
+    }
 
     //Aller au prochain Waypoint
     private void GetNextWaypoint()
@@ -35,7 +59,7 @@ public class Ennemy : MonoBehaviour
         //SI il n'y a plus de waypoint il détruit l'énémie
         if(waypoinIndex >= Waypoint_Script.point.Length - 1)
         {
-            Destroy(gameObject);
+            EndPath();
             return;
         }
 
@@ -43,5 +67,12 @@ public class Ennemy : MonoBehaviour
         waypoinIndex++;
         target = Waypoint_Script.point[waypoinIndex];
 
+    }
+
+
+    private void EndPath()
+    {
+        Player_Stat.lives--; 
+        Destroy(gameObject);
     }
 }
