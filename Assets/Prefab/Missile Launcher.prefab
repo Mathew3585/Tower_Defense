@@ -279,3 +279,5 @@ MonoBehaviour:
   BulletPrefab: {fileID: 5718181787998311142, guid: a2a63002e2b7c10429b2f6906d23ceda,
     type: 3}
   firePoint: {fileID: 6067028168029039559}
+  useLaser: 1
+  linerender: {fileID: 0}

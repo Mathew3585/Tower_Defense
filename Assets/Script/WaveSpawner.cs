@@ -9,14 +9,19 @@ public class WaveSpawner: MonoBehaviour
 {
     //Fonctions
     [SerializeField]
+    [Header("Prefabs Ennemies"), Tooltip("Cette Variable permet de gére les Prefabs des ennemies")]
     private Transform ennemyPrefabs;
     [SerializeField]
+    [Header("Temps entre chaque spawns"), Tooltip("Cette Variable permet de gére le Temps entre chaque spawn")]
     private float TimesBetweenspawn;
     [SerializeField]
+    [Header("Point de spawn"), Tooltip("Cette Variable permet de gére les point de spawn")]
     private Transform SpawnPoint;
     [SerializeField]
+    [Header("Temp de chaque vagues "), Tooltip("Cette Variable permet de gére le Temp de Chaque vagues")]
     private TMP_Text waveCountdoawnTimer;
     [SerializeField]
+    [Header("Temp entre chaque vagues "), Tooltip("Cette Variable permet de gére le Temp entre chaque vagues")]
     private float timeBetweenWaves = 5f;
     [SerializeField]
     private float countdown = 5f;

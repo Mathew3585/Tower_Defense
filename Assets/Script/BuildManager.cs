@@ -20,11 +20,9 @@ public class BuildManager : MonoBehaviour
     #endregion
 
     //Fonctions
-    public GameObject StandarTurretPrefab;
-    public GameObject MissileLancherTurretPrefab;
 
     private TourelleBleuprint turretToBluid;
-
+    [Header("Particule de Construction")]
     public GameObject ParticuleBuild;
     public bool canBuild { get { return turretToBluid != null; } }
     public bool hasMoney { get { return Player_Stat.money >= turretToBluid.cost; } }

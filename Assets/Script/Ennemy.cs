@@ -5,46 +5,42 @@ using UnityEngine;
 public class Ennemy : MonoBehaviour
 {
     //Fonction
-    public float speed = 10f;
-    private Transform target;
-    private int waypoinIndex = 0;
-    public int Health = 100;
-    public int value = 50;
+    [Header("Vitesse"), Tooltip("Cette Variable permet de gère la vitesse de l'ennemies")]
+    public float StartSpeed = 10;
+    [HideInInspector]
+    public float speed;
+    [Header("Vie"), Tooltip("Cette Variable permet de gère la vie de l'ennemies")]
+    public float Health = 100f;
+    [Header("Argent drop"), Tooltip("Cette Variable permet de gère l'argent drop")]
+    public int worth = 50;
+    [Header("Particule de mort"), Tooltip("Cette Variable permet de créer la particule de mort de l'énnemies")]
     public GameObject deadEffect;
     Player_Stat Player;
 
-    //trouver les target 
-    void Start()
+    //Permet d'apliquer une vitesse a speed 
+    public void Start()
     {
-        target = Waypoint_Script.point[0];
+        speed = StartSpeed;
     }
-    //Déplacer les personnages énnemies au niveaux des waypoints
-    private void Update()
-    {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        //Si l'ennemie et a 0.3 du waypoint il passe au prochain 
-        if(Vector3.Distance(transform.position, target.position) <= 0.3f)
-        {
-            GetNextWaypoint();
-        }
-    }
+
     //Permet de prendre des dégat
-    public void TakeDommage(int amount)
+    public void TakeDommage(float amount)
     {
         Health -= amount;
 
-        if(Health <= 0)
+        if (Health <= 0)
         {
             Die();
         }
     }
 
+
+    //Permet de mourrir
     private void Die()
     {
 
-        Player_Stat.money += value;
+        Player_Stat.money += worth;
 
         GameObject deathParticule = (GameObject)Instantiate(deadEffect, transform.position, Quaternion.identity);
         Destroy(deathParticule, 2f);
@@ -52,27 +48,10 @@ public class Ennemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //Aller au prochain Waypoint
-    private void GetNextWaypoint()
+
+    //Permet de ralentir l'ennemy
+    public void Slow(float amount)
     {
-
-        //SI il n'y a plus de waypoint il détruit l'énémie
-        if(waypoinIndex >= Waypoint_Script.point.Length - 1)
-        {
-            EndPath();
-            return;
-        }
-
-        //Cherhcer le prochain waypoint
-        waypoinIndex++;
-        target = Waypoint_Script.point[waypoinIndex];
-
-    }
-
-
-    private void EndPath()
-    {
-        Player_Stat.lives--; 
-        Destroy(gameObject);
-    }
+        speed = StartSpeed * (1 - amount);
+    } 
 }
