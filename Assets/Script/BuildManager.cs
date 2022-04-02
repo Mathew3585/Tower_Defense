@@ -22,39 +22,49 @@ public class BuildManager : MonoBehaviour
     //Fonctions
 
     private TourelleBleuprint turretToBluid;
+    private Node selectedNode;
+    public NodeUi nodeUi;
     [Header("Particule de Construction")]
     public GameObject ParticuleBuild;
     public bool canBuild { get { return turretToBluid != null; } }
     public bool hasMoney { get { return Player_Stat.money >= turretToBluid.cost; } }
 
-    //permettre de construire un tourelle
-    public void BuildTurretOn(Node node)
-    {
-
-        //Calculer l'argent du joueur 
-        if (Player_Stat.money < turretToBluid.cost)
-        {
-            Debug.Log("Pas assez d'argent !!!");
-            return;
-        }
-
-        Player_Stat.money -= turretToBluid.cost;
-
-       GameObject turret = (GameObject)Instantiate(turretToBluid.prefab, node.GetBuildPosition(), Quaternion.identity);
-       node.Turret = turret;
-
-        Debug.Log("Objet acheter  il vous reste : " + Player_Stat.money);
-
-        GameObject effect = (GameObject)Instantiate(ParticuleBuild, node.GetBuildPosition(), Quaternion.identity);
-        Destroy(effect, 1f);
-    }
-
-    //Mettre un tourelle
+    //Mettre un tourelle 
 
 
     public void SelectTurretToBuild(TourelleBleuprint turret)
     {
         turretToBluid = turret;
+        selectedNode = null;
+
+        DeselecetNode();
     }
 
-}
+    //Recuper les valeur de turretToBuild 
+    public TourelleBleuprint GetTuretToBuild()
+    {
+        return turretToBluid;
+    }
+
+    //Pemermet de savoir si une tourelle et selectionner et afficher Le nodeUi
+    public  void SelectedNode(Node node)
+    {
+
+        if(node == selectedNode)
+        {
+            DeselecetNode();
+            return;
+        }
+         
+        selectedNode = node;
+        turretToBluid = null;
+        nodeUi.SetTarget(node);
+    }
+
+    //Permet de déselect un node
+     public void DeselecetNode()
+    {
+        selectedNode = null;
+        nodeUi.Hide();
+    }
+} 

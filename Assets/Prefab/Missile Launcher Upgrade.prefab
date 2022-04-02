@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 6118617971298600395}
   - component: {fileID: 6811684861363813353}
   m_Layer: 0
-  m_Name: Missile Launcher
+  m_Name: Missile Launcher Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

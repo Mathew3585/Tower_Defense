@@ -2,10 +2,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameEnded = false;
+    public static bool gameIsOver;
+    [Header("Ui de Game Over")]
+    public GameObject GameOverUi;
+
+
+    private void Start()
+    {
+        gameIsOver = false; 
+    }
+
+
     void Update()
     {
-        if (gameEnded)
+        if (gameIsOver)
         {
             return;
         }
@@ -19,7 +29,8 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        gameEnded = true;
-        Debug.Log("Game Over!");
+        gameIsOver = true;
+        GameOverUi.SetActive(true);
+        
     }
 }

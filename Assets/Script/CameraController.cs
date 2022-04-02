@@ -12,6 +12,11 @@ public class CameraController : MonoBehaviour
     //Bouger la camera avec la souris ou les touche Z Q S D
     void Update()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
         //Bloque la camera
         if (Input.GetKeyDown(KeyCode.P))
         {

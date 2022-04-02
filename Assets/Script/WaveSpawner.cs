@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using UnityEngine;
+using UnityEngine; 
 using UnityEngine.UI;
 using TMPro;
 
@@ -49,6 +48,7 @@ public class WaveSpawner: MonoBehaviour
     {
         waveIndex++; //Changer de manche
         Debug.Log("Apparitions d'une nouvelle vague");
+        Player_Stat.Rounds++;
 
         //Delay entre chaque spawn
         for (int i = 0; i < waveIndex; i++)

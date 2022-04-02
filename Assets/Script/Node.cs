@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
@@ -8,11 +8,18 @@ public class Node : MonoBehaviour
     public Color NoEnoughtMoneyColor;
     private Color StartColor;
     public Vector3 PositionsOffset;
+
+    [HideInInspector]
     public GameObject Turret;
+    [HideInInspector]
+    public TourelleBleuprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
 
     private Renderer rend;
 
     private BuildManager buildManager;
+
 
     //Permet de canger de couleur
     private void Start()
@@ -28,6 +35,60 @@ public class Node : MonoBehaviour
         return transform.position + PositionsOffset;
     }
 
+
+    private void BuildTurret(TourelleBleuprint blueprint)
+    {
+
+        //Calculer l'argent du joueur 
+        if (Player_Stat.money < blueprint.cost)
+        {
+            Debug.Log("Pas assez d'argent !!!");
+            return;
+        }
+
+        Player_Stat.money -= blueprint.cost;
+
+        turretBlueprint = blueprint;
+
+        GameObject turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        Turret = turret;
+
+        Debug.Log("Objet acheter  il vous reste : " + Player_Stat.money);
+
+        GameObject effect = (GameObject)Instantiate(buildManager.ParticuleBuild, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+    }
+    public void UpgradeTurret()
+    {
+
+        //Calculer l'argent du joueur 
+        if (Player_Stat.money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Pas assez d'argent pour améliorer la tourelle!!!");
+            return;
+        }
+
+        Player_Stat.money -= turretBlueprint.upgradeCost;
+
+
+
+        //Suppression del'ancien tourrelle
+        Destroy(Turret);
+        //Créations de la nouvelle tourelle améliorer
+        GameObject turret = (GameObject)Instantiate(turretBlueprint.upgradePrefab, GetBuildPosition(), Quaternion.identity);
+        Turret = turret;
+
+        Debug.Log("Tourelle améliorer");
+
+        GameObject effect = (GameObject)Instantiate(buildManager.ParticuleBuild, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+
+        isUpgraded = true;
+
+        Debug.Log("Tourelle Construite");
+    }
+
+
     //Qaund la souris click sur une node
     private void OnMouseDown()
     {
@@ -37,23 +98,22 @@ public class Node : MonoBehaviour
             return;
         }
 
+        //Permet de ne pas construire sur un nodes deja remplie
+        if(Turret != null)
+        {
+            buildManager.SelectedNode(this); 
+            return;
+        }
+
+        BuildTurret(buildManager.GetTuretToBuild());
+
         //Verifie si on a bien séléctionner un tourrelle dans le shop 
         if (!buildManager.canBuild)
         {
             return;
         }
 
-        //Permet de ne pas construire sur un nodes deja remplie
-        if(Turret != null)
-        {
-            Debug.Log("Impossible de construire");
-            return;
-        }
-
-        buildManager.BuildTurretOn(this);
     }
-
-
 
     //Permet de decter quand la souris passe dessus
     private void OnMouseEnter()
@@ -71,7 +131,7 @@ public class Node : MonoBehaviour
         }
 
 
-
+        //Pemet de changer la couleur des nodes quand le joueur a de le'argent ou non
         if (buildManager.hasMoney)
         {
             rend.material.color = hoverColor;

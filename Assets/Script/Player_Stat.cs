@@ -14,8 +14,11 @@ public class Player_Stat : MonoBehaviour
     [Header("Vie du joueur de base"), Tooltip("Cette Variable permet de gére la vie du joueur")]
     public int startLife = 100;
 
+    public static int Rounds;
+
     public void Start()
     {
+        Rounds = 0; 
         money = startmoney;
         lives = startLife;
     }
