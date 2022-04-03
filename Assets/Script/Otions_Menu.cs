@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class Otions_Menu : MonoBehaviour
 {
     // Start is called before the first frame update
+    public string LevelToLoad = "Map";
+    public SceenFader sceenFader;
     public void Playgame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        sceenFader.FadeTo(LevelToLoad);
     }
-    public void QuitGame()
+    public void QuitGame() 
     {
         Application.Quit();
     }

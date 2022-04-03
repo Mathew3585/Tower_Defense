@@ -7,12 +7,10 @@ using TMPro;
 public class WaveSpawner: MonoBehaviour
 {
     //Fonctions
-    [SerializeField]
-    [Header("Prefabs Ennemies"), Tooltip("Cette Variable permet de gére les Prefabs des ennemies")]
-    private Transform ennemyPrefabs;
-    [SerializeField]
-    [Header("Temps entre chaque spawns"), Tooltip("Cette Variable permet de gére le Temps entre chaque spawn")]
-    private float TimesBetweenspawn;
+
+    [Header("Gestionnaire des Manche"), Tooltip("Cette Variable permet de générer des vagues d'ennemies.")]
+    public static int EnemiesAlive = 0;
+    public Wave[] waves;
     [SerializeField]
     [Header("Point de spawn"), Tooltip("Cette Variable permet de gére les point de spawn")]
     private Transform SpawnPoint;
@@ -25,14 +23,33 @@ public class WaveSpawner: MonoBehaviour
     [SerializeField]
     private float countdown = 5f;
     private int waveIndex = 0;
+    public GameManager gameManager;
 
+
+    private void Start()
+    {
+        EnemiesAlive = 0;
+    }
     void Update()
     {
-        //Si le compteur de début de partie et = 0 alors on lance la game
+
+        if(EnemiesAlive > 0)
+        {
+            return;
+        }
+
+        if (waveIndex == waves.Length)
+        {
+            gameManager.Winlevel();
+            this.enabled = false;
+        }
+
+        //Si le compteur de début de partie et <= 0 alors on lance la game
         if (countdown <= 0f) 
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            return;
         }
         //Chaque seconde qui passe on retire 1 à  countdown
         countdown -= Time.deltaTime;
@@ -46,21 +63,29 @@ public class WaveSpawner: MonoBehaviour
     //Lance la game
     IEnumerator SpawnWave()
     {
-        waveIndex++; //Changer de manche
+
+        Wave wave = waves[waveIndex];
+
+        EnemiesAlive = wave.count;
+
         Debug.Log("Apparitions d'une nouvelle vague");
         Player_Stat.Rounds++;
 
         //Delay entre chaque spawn
-        for (int i = 0; i < waveIndex; i++)
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(TimesBetweenspawn);
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1f / wave.rate);
         }
+
+        waveIndex++;
+
+
     }
 
     //Faire Spawn les ennemies 
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(ennemyPrefabs, SpawnPoint.position, SpawnPoint.rotation);
+        Instantiate(enemy, SpawnPoint.position, SpawnPoint.rotation);
     }
 }

@@ -88,7 +88,16 @@ public class Node : MonoBehaviour
         Debug.Log("Tourelle Construite");
     }
 
-
+    //permet de vendre les tourelles 
+    public void SellTurret()
+    {
+        Player_Stat.money += turretBlueprint.GetSellAmount();
+        GameObject effect = (GameObject)Instantiate(buildManager.ParticuleSell, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+        Destroy(Turret);
+        turretBlueprint = null;
+        isUpgraded = false;
+    }
     //Qaund la souris click sur une node
     private void OnMouseDown()
     {
@@ -105,7 +114,7 @@ public class Node : MonoBehaviour
             return;
         }
 
-        BuildTurret(buildManager.GetTuretToBuild());
+        BuildTurret(buildManager.GetTuretToBuild()); 
 
         //Verifie si on a bien séléctionner un tourrelle dans le shop 
         if (!buildManager.canBuild)

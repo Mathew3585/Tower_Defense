@@ -1,9 +1,8 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     //Fontions
-    private bool CanMove = true;
     public float panSpeed = 30f;
     public float panBorder = 10f;
     public float scroolSpeed = 5f;
@@ -15,15 +14,6 @@ public class CameraController : MonoBehaviour
         if (GameManager.gameIsOver)
         {
             this.enabled = false;
-            return;
-        }
-        //Bloque la camera
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            CanMove = !CanMove;
-        }
-        if (!CanMove)
-        {
             return;
         }
         //Déplacement vers l'avant 

@@ -152,8 +152,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78dc85271bb6850408b0050a91c3156d, type: 2}
-  - {fileID: 2100000, guid: 77ce046a9acccf5409cc4db8ced10d0e, type: 2}
+  - {fileID: 2100000, guid: 641f318b17b26504eaece7a18a2e7e14, type: 2}
+  - {fileID: 2100000, guid: a2182d4a8d5feb34eb08899163cb5c50, type: 2}
   - {fileID: 2100000, guid: 111663676aee7e445adc82627f399840, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -236,7 +236,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 63b46f20e75dbfa44baaa7b2d174bd3c, type: 2}
-  - {fileID: 2100000, guid: 6bb58ed4fc75a5c49acf42da79e9fed0, type: 2}
+  - {fileID: 2100000, guid: 8bc31818eefad774fbca1d2e275385d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -394,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lazer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009783952249743062, guid: d86c515a4743dd647a9bcbed1f6ff2c3,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6009783952249743063, guid: d86c515a4743dd647a9bcbed1f6ff2c3,
         type: 3}

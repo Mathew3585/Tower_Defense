@@ -1,27 +1,22 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     //Fonction
-    [Header("Text Rounds Survécus")]
-    public TMP_Text roundsText;
 
 
-    void OnEnable()
-    {
-        roundsText.text = Player_Stat.Rounds.ToString();
-    }
+    public SceenFader sceneFader;
+    public string menuSceneName  = "Menu";
 
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        sceneFader.FadeTo(menuSceneName); 
     }
 }
