@@ -19678,6 +19678,11 @@ PrefabInstance:
       propertyPath: nodeUi
       value: 
       objectReference: {fileID: 634454797}
+    - target: {fileID: 4107738760359500482, guid: c4f897dc587e6ac4dbe376734bbf5b14,
+        type: 3}
+      propertyPath: startLife
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4107738760359500483, guid: c4f897dc587e6ac4dbe376734bbf5b14,
         type: 3}
       propertyPath: m_RootOrder
