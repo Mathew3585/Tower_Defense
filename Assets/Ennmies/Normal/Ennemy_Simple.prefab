@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1758459886005182756}
   - component: {fileID: -2697162335616635542}
   - component: {fileID: 3459210287680426357}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ennemy_Simple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -114,6 +114,7 @@ MonoBehaviour:
   speed: 0
   StartHealth: 100
   worth: 50
+  dammage: 15
   deadEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   healthbar: {fileID: 2040278489124600958}
 --- !u!114 &3459210287680426357
@@ -139,7 +140,7 @@ GameObject:
   - component: {fileID: 1582455690283545287}
   - component: {fileID: 4163492569149078729}
   - component: {fileID: 2040278489124600958}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthBarBG (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +215,7 @@ GameObject:
   - component: {fileID: 2305440765967962535}
   - component: {fileID: 1708405098464242877}
   - component: {fileID: 6478937154631489840}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthBarBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +292,7 @@ GameObject:
   - component: {fileID: 2330878530066968987}
   - component: {fileID: 7773755139707090610}
   - component: {fileID: 3326448926143050459}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

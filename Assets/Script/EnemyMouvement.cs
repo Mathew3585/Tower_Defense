@@ -37,7 +37,7 @@ public class EnemyMouvement : MonoBehaviour
         //SI il n'y a plus de waypoint il détruit l'énémie
         if (waypoinIndex >= Waypoint_Script.point.Length - 1)
         {
-            EndPath();
+            enemy.EndOfPath();
             return;
         }
 
@@ -48,10 +48,5 @@ public class EnemyMouvement : MonoBehaviour
     }
 
 
-    private void EndPath()
-    {
-        Player_Stat.lives--;
-        WaveSpawner.EnemiesAlive--;
-        Destroy(gameObject);
-    }
+
 } 

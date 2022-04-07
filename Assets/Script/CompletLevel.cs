@@ -22,6 +22,7 @@ public class CompletLevel : MonoBehaviour
 
     public void Continue()
     {
+        Time.timeScale = 1;
         sceneFader.FadeTo(nextLevel);
 
     }
@@ -29,6 +30,7 @@ public class CompletLevel : MonoBehaviour
 
     public void Menu()
     {
+        Time.timeScale = 1;
         sceneFader.FadeTo(menuSceneName);
     }
 }

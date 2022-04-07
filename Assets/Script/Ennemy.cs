@@ -15,15 +15,15 @@ public class Ennemy : MonoBehaviour
     private float Health;
     [Header("Argent drop"), Tooltip("Cette Variable permet de gère l'argent drop")]
     public int worth = 50;
+    [SerializeField]
+    [Header("Dégat"), Tooltip("Cette Variable permet de gérer les dégat des ennmies")]
+    private int dammage;
     [Header("Particule de mort"), Tooltip("Cette Variable permet de créer la particule de mort de l'énnemies")]
     public GameObject deadEffect;
     Player_Stat Player;
     [Header("Image de la vie des énnemies"), Tooltip("Cette Variable permet de créer l'ui qui montre la vie des ennmies")]
     public Image healthbar;
     private bool isDead = false;
-
-
-
 
     //Permet d'apliquer une vitesse a speed 
     public void Start()
@@ -66,6 +66,10 @@ public class Ennemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-
-
+    public void EndOfPath()
+    {
+        Player_Stat.lives -= dammage;
+        WaveSpawner.EnemiesAlive--;
+        Destroy(gameObject);
+    }
 }
