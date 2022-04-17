@@ -6,8 +6,15 @@ public class CameraController : MonoBehaviour
     public float panSpeed = 30f;
     public float panBorder = 10f;
     public float scroolSpeed = 5f;
+    [Header("Axes Y de la camera"), Tooltip("Cette Variable permet de générer l'axes y de la camera.")]
     public float minY = 10f;
     public float MaxY= 80f;
+    [Header("Axes X de la camera"), Tooltip("Cette Variable permet de générer l'axes x de la camera.")]
+    public float minX = 10f;
+    public float MaxX = 80f;
+    [Header("Axes Z de la camera"), Tooltip("Cette Variable permet de générer l'axes z de la camera.")]
+    public float minZ = 10f;
+    public float MaxZ = 80f;
     //Bouger la camera avec la souris ou les touche Z Q S D
     void Update()
     {
@@ -44,6 +51,9 @@ public class CameraController : MonoBehaviour
         Vector3 pos = transform.position;
         pos.y -= scroll * 1000 *  scroolSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, MaxY);
+        pos.x = Mathf.Clamp(pos.x, minX, MaxX);
+        pos.z = Mathf.Clamp(pos.z, minZ, MaxZ);
         transform.position = pos;
+        
     }
 }

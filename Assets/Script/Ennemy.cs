@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class Ennemy : MonoBehaviour
 {
@@ -24,14 +25,20 @@ public class Ennemy : MonoBehaviour
     [Header("Image de la vie des énnemies"), Tooltip("Cette Variable permet de créer l'ui qui montre la vie des ennmies")]
     public Image healthbar;
     private bool isDead = false;
+    [Header("Gérer le Camera Shake"), Tooltip("Cette Variable permet de gérer le camera shake")]
+    public CameraShaker camerashake;
+    private GameManager gameManager;
+    public float DurationShake = 0.15f;
+    public float MagnitueShake = 0.4f;
+
 
     //Permet d'apliquer une vitesse a speed 
     public void Start()
     {
+        camerashake = Camera.main.gameObject.GetComponent<CameraShaker>();
         speed = StartSpeed;
         Health = StartHealth;
     }
-
 
     //Permet de prendre des dégat
     public void TakeDommage(float amount)
@@ -66,8 +73,10 @@ public class Ennemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //permet de mettre des dégat au joueur quand il arrive a la fin des waypoints
     public void EndOfPath()
     {
+        CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
         Player_Stat.lives -= dammage;
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);

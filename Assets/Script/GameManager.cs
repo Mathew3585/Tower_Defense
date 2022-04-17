@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
     public SceenFader SceneFader;
     [Header("Ui de victoire")]
     public GameObject completLevelUI;
+    Ennemy ennemy;
+
+
     private void Start()
     {
-        gameIsOver = false; 
+        gameIsOver = false;
     }
 
 
@@ -40,5 +43,8 @@ public class GameManager : MonoBehaviour
     {
         gameIsOver = true;
         completLevelUI.SetActive(true);
+       
     }
+
+    
 }

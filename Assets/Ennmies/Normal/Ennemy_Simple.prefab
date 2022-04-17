@@ -117,6 +117,9 @@ MonoBehaviour:
   dammage: 15
   deadEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   healthbar: {fileID: 2040278489124600958}
+  camerashake: {fileID: 0}
+  DurationShake: 0.2
+  MagnitueShake: 0.4
 --- !u!114 &3459210287680426357
 MonoBehaviour:
   m_ObjectHideFlags: 0
