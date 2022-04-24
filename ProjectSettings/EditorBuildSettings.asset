@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Map/Level Select.unity
     guid: c858dc7984401c149bc0b5e428313734
   - enabled: 1
+    path: Assets/Map/Tuto.unity
+    guid: 9a2dcf6fdc4d40442bd35f1ee2eefc54
+  - enabled: 1
     path: Assets/Map/Map.unity
     guid: 14d5b535c2ec5984ba0037613a67d851
   - enabled: 1

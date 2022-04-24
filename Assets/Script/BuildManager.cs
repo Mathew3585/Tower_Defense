@@ -27,6 +27,8 @@ public class BuildManager : MonoBehaviour
     [Header("Particule de Construction")]
     public GameObject ParticuleBuild;
     public GameObject ParticuleSell;
+    public AudioClip AudioBuild;
+    public AudioClip AudioSell;
     public bool canBuild { get { return turretToBluid != null; } }
     public bool hasMoney { get { return Player_Stat.money >= turretToBluid.cost; } }
 

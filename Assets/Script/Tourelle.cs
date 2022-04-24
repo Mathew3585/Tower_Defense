@@ -23,6 +23,14 @@ public class Tourelle : MonoBehaviour
     public GameObject BulletPrefab;
     public Transform firePoint;
 
+    [Header("Son du tire de la Tourelle")]
+    public AudioClip[] sounds;
+    private AudioSource source;
+    [Range(0.1f, 0.5f)]
+    public float volumeChangeMultiplier = 0.2f;
+    [Range(0.1f, 0.5f)]
+    public float pitchChangeMultiplier = 0.2f;
+
     [Header("Use Lazer")]
     public bool useLaser;
     [Header("Dommage et Slow"), Tooltip("Cette Variable permet de gère les dommage et le ralentissement des ennemies quand la tourelle lazer est activer")]
@@ -32,10 +40,19 @@ public class Tourelle : MonoBehaviour
     public LineRenderer linerender;
     public ParticleSystem impactEffect;
     public ParticleSystem ImpactParticule;
+    [Header("Son du tire de la Tourelle Lazer")]
+    public AudioClip[] soundsLazer;
+    private AudioSource sourceLazer;
+    [Range(0.1f, 0.5f)]
+    public float volumeChangeMultiplierLazer = 0.2f;
+    [Range(0.1f, 0.5f)]
+    public float pitchChangeMultiplierLazer = 0.2f;
 
     //Lancer en boucle la fonctions Updatetarget
     void Start()
     {
+        source = GetComponent<AudioSource>();
+        sourceLazer = GetComponent<AudioSource>();
         InvokeRepeating("Updatetarget", 0f, 0.5f);
     }
 
@@ -85,6 +102,7 @@ public class Tourelle : MonoBehaviour
                     linerender.enabled = false;
                     impactEffect.Stop();
                     ImpactParticule.Stop();
+
                 }
             }
 
@@ -135,7 +153,13 @@ public class Tourelle : MonoBehaviour
                 linerender.enabled = true;
                 impactEffect.Play();
                 ImpactParticule.Play();
+                sourceLazer.clip = soundsLazer[Random.Range(0, soundsLazer.Length)];
+                sourceLazer.volume = Random.Range(1 - volumeChangeMultiplierLazer, 1);
+                sourceLazer.pitch = Random.Range(1 - pitchChangeMultiplierLazer, 1 + pitchChangeMultiplierLazer);
+                sourceLazer.PlayOneShot(sourceLazer.clip);
+
             }
+
             //Appliquer la positions au line renderer
             linerender.SetPosition(0, firePoint.position);
             linerender.SetPosition(1, target.position);
@@ -147,6 +171,7 @@ public class Tourelle : MonoBehaviour
 
             //Apparaitre les particule sur l'ennemies
             impactEffect.transform.position = target.position + dir.normalized * 1.5f;
+
         }
 
 
@@ -156,6 +181,11 @@ public class Tourelle : MonoBehaviour
             GameObject bulletGo = (GameObject)Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
             Bullet bullet = bulletGo.GetComponent<Bullet>();
             Debug.Log("tire");
+
+            source.clip = sounds[Random.Range(0, sounds.Length)];
+            source.volume = Random.Range(1 - volumeChangeMultiplier, 1);
+            source.pitch = Random.Range(1 - pitchChangeMultiplier, 1 + pitchChangeMultiplier);
+            source.PlayOneShot(source.clip);
 
             if(bullet != null)
             {

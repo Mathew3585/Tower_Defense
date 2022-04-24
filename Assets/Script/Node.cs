@@ -19,6 +19,7 @@ public class Node : MonoBehaviour
     private Renderer rend;
 
     private BuildManager buildManager;
+    AudioSource audioData;
 
 
     //Permet de canger de couleur
@@ -27,6 +28,7 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         StartColor = rend.material.color;
         buildManager = BuildManager.instance;
+
     }
 
     //Savoir ou Construire la toure 
@@ -57,6 +59,7 @@ public class Node : MonoBehaviour
 
         GameObject effect = (GameObject)Instantiate(buildManager.ParticuleBuild, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 1f);
+
     }
     public void UpgradeTurret()
     {

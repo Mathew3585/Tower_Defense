@@ -75,7 +75,6 @@ public class PlayerTimerGame : MonoBehaviour
 
     private void UpadateTimer(float time)
     {
-        Debug.Log(time);
         TimeSpan _time = TimeSpan.FromSeconds(time);
 
         string test = $"{_time.Minutes}:{_time.Seconds}:{_time.Milliseconds}";
