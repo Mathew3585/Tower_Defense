@@ -53,6 +53,8 @@ MonoBehaviour:
   - {fileID: 1581960262394256406}
   - {fileID: -3988898405871476682}
   - {fileID: 8917775817229310694}
+  - {fileID: 2562393722458542517}
+  - {fileID: 2996153836723365375}
 --- !u!114 &1581960262394256406
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -69,23 +71,23 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.9
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 3.7
+    m_Value: 1.2
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.609
     min: 0
     max: 1
   clamp:
     m_OverrideState: 0
-    m_Value: 65472
+    m_Value: 65473.59
     min: 0
   tint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
@@ -95,7 +97,7 @@ MonoBehaviour:
     m_Value: 0
   skipIterations:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 5
     min: 0
     max: 16
   dirtTexture:
@@ -105,6 +107,59 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
     min: 0
+--- !u!114 &2562393722458542517
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 0.9832112, y: 0.9874084, z: 1, w: -0.0091158245}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 0.88661176, y: 0.94472545, z: 1, w: -0.24612577}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 0.9158671, y: 0.9422482, z: 1, w: -0.18231538}
+--- !u!114 &2996153836723365375
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
+  m_Name: FilmGrain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  type:
+    m_OverrideState: 1
+    m_Value: 10
+  intensity:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  response:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  texture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
 --- !u!114 &5244804322374731185
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -137,11 +192,11 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   postExposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.96
   contrast:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 10
     min: -100
     max: 100
   colorFilter:
@@ -151,12 +206,12 @@ MonoBehaviour:
     showAlpha: 0
     showEyeDropper: 1
   hueShift:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
     min: -180
     max: 180
   saturation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
     min: -100
     max: 100
