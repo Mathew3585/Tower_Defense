@@ -11,8 +11,6 @@ public class SpectrumScript : MonoBehaviour
     public float MaxHeight = 425f;
     public float upadateSenstivity = 0.5f;
     public Color visualierColor = Color.cyan;
-    [Space(15)]
-    public AudioClip audioClip;
     [Space(15) , Range(64,8192)]
     public int visualzerSimples = 64;
 
@@ -24,16 +22,24 @@ public class SpectrumScript : MonoBehaviour
     void Start()
     {
         visualizerObject = GetComponentsInChildren<VisualerObjectScript>();
-
-
-        if (!audioClip)
-            return;
-
         m_audiosource = new GameObject ("AudioSource").AddComponent<AudioSource>();
+        
+    }
+
+    public void StartAudio(AudioClip audioClip)
+    {
         m_audiosource.clip = audioClip;
         m_audiosource.Play();
+    }
 
+    public void StopAudio()
+    {
+        m_audiosource.Stop();
+    }
 
+    public float GetAudioLenght()
+    {
+        return m_audiosource.clip.length;
     }
 
     // Update is called once per frame

@@ -12,6 +12,9 @@ public class TutoManager : MonoBehaviour
     public GameObject Visualizer;
     public GameObject gameManager;
     public GameObject ClickMouseBlocker;
+    public List<AudioClip> ListAudio;
+
+    private float _timer = 0;
     
 
     private void Update()
@@ -32,12 +35,24 @@ public class TutoManager : MonoBehaviour
 
         if(popUpIndex == 0) 
         {
+            _timer += Time.deltaTime;
             gameManager.SetActive(false);
             ClickMouseBlocker.SetActive(true);
-            Visualizer.SetActive(true);
+
+            if(_timer >= Visualizer.GetComponent<SpectrumScript>().GetAudioLenght())
+            {
+                Visualizer.SetActive(false);
+            }
+            else
+            {
+                Visualizer.SetActive(true);
+                Visualizer.GetComponent<SpectrumScript>().StartAudio(ListAudio[0]);
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex = 1;
+                _timer = 0;
                 Debug.Log(popUpIndex);
  
             }
