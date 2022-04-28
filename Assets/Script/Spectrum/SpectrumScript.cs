@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CurvedUIUtility;
 
 public class SpectrumScript : MonoBehaviour
 {
@@ -22,8 +21,9 @@ public class SpectrumScript : MonoBehaviour
     void Start()
     {
         visualizerObject = GetComponentsInChildren<VisualerObjectScript>();
-        m_audiosource = new GameObject ("AudioSource").AddComponent<AudioSource>();
-        
+        m_audiosource = new GameObject("AudioSource").AddComponent<AudioSource>();
+
+
     }
 
     public void StartAudio(AudioClip audioClip)
@@ -53,7 +53,6 @@ public class SpectrumScript : MonoBehaviour
             newSize.y = Mathf.Clamp(Mathf.Lerp(newSize.y, MinHeight + (spectrumData[i] * (MaxHeight - MinHeight) * 5f), upadateSenstivity), MinHeight, MaxHeight);
             visualizerObject[i].GetComponent<RectTransform>().sizeDelta = newSize;
 
-            visualizerObject[i].GetComponent<CurvedImage>().color = visualierColor;
         }
     }
 }

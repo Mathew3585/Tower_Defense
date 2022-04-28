@@ -9956,6 +9956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6015f16d4e502be448d176574e1c0ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: []
 --- !u!4 &881514717
 Transform:
   m_ObjectHideFlags: 0
@@ -14868,7 +14869,8 @@ MonoBehaviour:
   Visualizer: {fileID: 67749051}
   gameManager: {fileID: 1562987029}
   ClickMouseBlocker: {fileID: 1124532142}
-  ListAudio: []
+  ListAudio:
+  - {fileID: 8300000, guid: 6375239621f6f114c9383af151e727d7, type: 3}
 --- !u!4 &1269045671
 Transform:
   m_ObjectHideFlags: 0
