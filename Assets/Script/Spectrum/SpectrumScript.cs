@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpectrumScript : MonoBehaviour
 {
+    public static SpectrumScript instance;
 
     //Fonction
     public float MinHeight = 15f;
@@ -14,22 +15,21 @@ public class SpectrumScript : MonoBehaviour
     public int visualzerSimples = 64;
 
     VisualerObjectScript[] visualizerObject;
-    AudioSource m_audiosource;
+    public AudioSource m_audiosource;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         visualizerObject = GetComponentsInChildren<VisualerObjectScript>();
         m_audiosource = new GameObject("AudioSource").AddComponent<AudioSource>();
-
-
     }
 
     public void StartAudio(AudioClip audioClip)
     {
         m_audiosource.clip = audioClip;
-        m_audiosource.Play();
+        m_audiosource.PlayOneShot(audioClip);
     }
 
     public void StopAudio()
@@ -39,7 +39,7 @@ public class SpectrumScript : MonoBehaviour
 
     public float GetAudioLenght()
     {
-        return m_audiosource.clip.length;
+        return m_audiosource.clip?.length ?? 0;
     }
 
     // Update is called once per frame

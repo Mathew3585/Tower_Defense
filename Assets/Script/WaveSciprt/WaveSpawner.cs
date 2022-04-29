@@ -30,7 +30,7 @@ public class WaveSpawner: MonoBehaviour
 
 
     private void Start()
-    {
+    {       
         EnemiesAlive = 0;
     }
     void Update()

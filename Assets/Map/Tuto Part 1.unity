@@ -692,6 +692,7 @@ MonoBehaviour:
   upadateSenstivity: 1
   visualierColor: {r: 0, g: 0.96544814, b: 1, a: 1}
   visualzerSimples: 64
+  m_audiosource: {fileID: 0}
 --- !u!95 &67749054
 Animator:
   serializedVersion: 3
@@ -14871,6 +14872,12 @@ MonoBehaviour:
   ClickMouseBlocker: {fileID: 1124532142}
   ListAudio:
   - {fileID: 8300000, guid: 6375239621f6f114c9383af151e727d7, type: 3}
+  - {fileID: 8300000, guid: f2d98c4ed06561a4b9dfcbcb64d79da3, type: 3}
+  - {fileID: 8300000, guid: c682c91ff4b4e8447bafa4839c722d7f, type: 3}
+  - {fileID: 8300000, guid: cea65eef5b3e1cb4e8d72c2ac6cf0799, type: 3}
+  - {fileID: 8300000, guid: fd188af9dc8b6e44095c30bdc4fbf509, type: 3}
+  - {fileID: 8300000, guid: 092c156c6fc2aad48b006cb6da7bd4b2, type: 3}
+  - {fileID: 8300000, guid: a0d8969410adb2848a5868457c907679, type: 3}
 --- !u!4 &1269045671
 Transform:
   m_ObjectHideFlags: 0

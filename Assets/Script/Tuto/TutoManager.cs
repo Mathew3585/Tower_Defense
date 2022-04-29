@@ -18,6 +18,15 @@ public class TutoManager : MonoBehaviour
     private float _timer = 0;
     
 
+    public void Start()
+    {
+        _timer += Time.deltaTime;
+        gameManager.SetActive(false);
+        ClickMouseBlocker.SetActive(true);
+        SpectrumScript.instance.StartAudio(ListAudio [0]);
+    }
+
+
     private void Update()
     {
         //Afficher le popIndex avec +1
@@ -34,29 +43,22 @@ public class TutoManager : MonoBehaviour
             }
         }
 
-        if(popUpIndex == 0) 
+        if (_timer >= Visualizer.GetComponent<SpectrumScript>().GetAudioLenght())
         {
-            _timer += Time.deltaTime;
-            gameManager.SetActive(false);
-            ClickMouseBlocker.SetActive(true);
+            Visualizer.SetActive(false);
+        }
+        else
+        {
+            Visualizer.SetActive(true);
+        }
 
-            if(_timer >= Visualizer.GetComponent<SpectrumScript>().GetAudioLenght())
-            {
-                Visualizer.SetActive(false);
-            }
-            else
-            {
-                Visualizer.SetActive(true);
-                Visualizer.GetComponent<SpectrumScript>().StartAudio(ListAudio[0]);
-            }
+        if (Input.GetMouseButtonDown(0))
+        {
+            popUpIndex = 1;
+            Debug.Log(popUpIndex);
+            _timer = 0;
+            SpectrumScript.instance.StartAudio(ListAudio[1]);
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                popUpIndex = 1;
-                _timer = 0;
-                Debug.Log(popUpIndex);
- 
-            }
         }
         else if (popUpIndex == 1)
         {
@@ -64,7 +66,7 @@ public class TutoManager : MonoBehaviour
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
-;
+                SpectrumScript.instance.StartAudio(ListAudio[2]);
             }
         }
         else if (popUpIndex == 2)
@@ -73,6 +75,7 @@ public class TutoManager : MonoBehaviour
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
+                SpectrumScript.instance.StartAudio(ListAudio[3]);
             }
         }
         else if (popUpIndex == 3)
@@ -81,6 +84,7 @@ public class TutoManager : MonoBehaviour
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
+                SpectrumScript.instance.StartAudio(ListAudio[4]);
             }
         }
         else if (popUpIndex == 4)
@@ -89,6 +93,7 @@ public class TutoManager : MonoBehaviour
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
+                SpectrumScript.instance.StartAudio(ListAudio[5]);
             }
         }
         else if (popUpIndex == 5)
@@ -97,6 +102,7 @@ public class TutoManager : MonoBehaviour
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
+                SpectrumScript.instance.StartAudio(ListAudio[6]);
             }
         }
         else if (popUpIndex == 6)
@@ -105,6 +111,7 @@ public class TutoManager : MonoBehaviour
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
+                SpectrumScript.instance.StartAudio(ListAudio[7]);
             }
         }
         else if (popUpIndex == 7)
@@ -115,6 +122,7 @@ public class TutoManager : MonoBehaviour
                 gameManager.SetActive(true);
                 ClickMouseBlocker.SetActive(false);
                 Debug.Log(popUpIndex);
+                SpectrumScript.instance.StartAudio(ListAudio[8]);
             }
         }
     }

@@ -12,6 +12,7 @@ public class EnemyMouvement : MonoBehaviour
 
     void Start()
     {
+
         enemy = GetComponent<Ennemy>();
         target = Waypoint_Script.point[0];
     }
