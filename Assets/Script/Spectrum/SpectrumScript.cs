@@ -10,7 +10,6 @@ public class SpectrumScript : MonoBehaviour
     public float MinHeight = 15f;
     public float MaxHeight = 425f;
     public float upadateSenstivity = 0.5f;
-    public Color visualierColor = Color.cyan;
     [Space(15) , Range(64,8192)]
     public int visualzerSimples = 64;
 

@@ -8,16 +8,22 @@ public class TutoManager : MonoBehaviour
 {
     // Start is called before the first frame update
     //Fonction
+    [Header("Popup"), Tooltip("Cette Variable permet de gère le nombre de popup")]
     public GameObject[] popUps;
+    [Header("Tuto Manager"), Tooltip("Cette Variable permet de renseigner le tuto Manager")]
+    public GameObject tutoManager;
     private int popUpIndex;
+    [Header("Visualizer"), Tooltip("Cette Variable permet de renseigner le visualizer")]
     public GameObject Visualizer;
+    [Header("Game Manager"), Tooltip("Cette Variable permet de renseigner le Game Manager")]
     public GameObject gameManager;
+    [Header("ClickMouseBlocker"), Tooltip("Cette Variable permet de renseigner le ClickMouseBlocker")]
     public GameObject ClickMouseBlocker;
+    [Header("List Audio"), Tooltip("Cette Variable permet de renseigner la List Audio")]
     public List<AudioClip> ListAudio;
-
     private float _timer = 0;
     
-
+    //Sart du jeu 
     public void Start()
     {
         _timer += Time.deltaTime;
@@ -26,23 +32,18 @@ public class TutoManager : MonoBehaviour
         SpectrumScript.instance.StartAudio(ListAudio [0]);
     }
 
-
+    //Update
     private void Update()
     {
-        //Afficher le popIndex avec +1
-        for (int i = 0; i < popUps.Length; i++)
-        {
-            if (i == popUpIndex)
-            {
-                popUps[i].SetActive(true);
-                
-            }
-            else
-            {
-                popUps[i].SetActive(false);
-            }
-        }
+        PupupIndexParamter();
+        GetLenghtaudio();
+        PopupParamter();
+    }
 
+
+    //Avoir la Longeur du clip audio
+    public void GetLenghtaudio()
+    {
         if (_timer >= Visualizer.GetComponent<SpectrumScript>().GetAudioLenght())
         {
             Visualizer.SetActive(false);
@@ -51,28 +52,57 @@ public class TutoManager : MonoBehaviour
         {
             Visualizer.SetActive(true);
         }
+    }
 
-        if (Input.GetMouseButtonDown(0))
+    public void PupupIndexParamter()
+    {
+        //Afficher le popIndex avec +1
+        for (int i = 0; i < popUps.Length; i++)
         {
-            popUpIndex = 1;
-            Debug.Log(popUpIndex);
-            _timer = 0;
-            SpectrumScript.instance.StartAudio(ListAudio[1]);
+            if (i == popUpIndex)
+            {
+                popUps[i].SetActive(true);
 
+            }
+            else
+            {
+                popUps[i].SetActive(false);
+            }
         }
-        else if (popUpIndex == 1)
+
+    }
+
+    //Régler les parametre des popups
+    public void PopupParamter()
+    {
+        if (popUpIndex == 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex++;
                 Debug.Log(popUpIndex);
+                _timer = 0;
+                SpectrumScript.instance.StartAudio(ListAudio[1]);
+
+            }
+        }
+
+        else if (popUpIndex == 1)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                _timer = 0;
+                popUpIndex++;
                 SpectrumScript.instance.StartAudio(ListAudio[2]);
+                ClickMouseBlocker.SetActive(false);
+                Debug.Log(popUpIndex);
             }
         }
         else if (popUpIndex == 2)
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _timer = 0;
                 popUpIndex++;
                 Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[3]);
@@ -82,6 +112,8 @@ public class TutoManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _timer = 0;
+                gameManager.SetActive(true);
                 popUpIndex++;
                 Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[4]);
@@ -91,6 +123,7 @@ public class TutoManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _timer = 0;
                 popUpIndex++;
                 Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[5]);
@@ -100,6 +133,7 @@ public class TutoManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _timer = 0;
                 popUpIndex++;
                 Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[6]);
@@ -109,6 +143,7 @@ public class TutoManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _timer = 0;
                 popUpIndex++;
                 Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[7]);
@@ -118,11 +153,11 @@ public class TutoManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _timer = 0;
                 popUpIndex++;
-                gameManager.SetActive(true);
-                ClickMouseBlocker.SetActive(false);
                 Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[8]);
+                tutoManager.SetActive(false);
             }
         }
     }
