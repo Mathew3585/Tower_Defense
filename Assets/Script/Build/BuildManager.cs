@@ -23,11 +23,16 @@ public class BuildManager : MonoBehaviour
 
     private TourelleBleuprint turretToBluid;
     private Node selectedNode;
+    [Header("Node")]
     public NodeUi nodeUi;
     [Header("Particule de Construction")]
     public GameObject ParticuleBuild;
+    [Space(5)]
     public GameObject ParticuleSell;
+    [Header("Audio de Construction")]
+    [Space(5)]
     public AudioClip AudioBuild;
+    [Space(5)]
     public AudioClip AudioSell;
     public bool canBuild { get { return turretToBluid != null; } }
     public bool hasMoney { get { return Player_Stat.money >= turretToBluid.cost; } }

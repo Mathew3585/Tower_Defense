@@ -15,8 +15,11 @@ public class PlayerTimerGame : MonoBehaviour
     Player_Stat Player;
     GameManager GameManager;
 
+    [Header("GameOverText"), Tooltip("Cette Variable permet de gére le text de gameOver")]
     [SerializeField]
     private TextMeshProUGUI GameOverText;
+    [Space(10)]
+    [Header("WinText"), Tooltip("Cette Variable permet de gére le text de Win")]
     [SerializeField]
     private TextMeshProUGUI WinText;
 

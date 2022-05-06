@@ -10,28 +10,38 @@ public class WaveSpawner: MonoBehaviour
 
     [Header("Gestionnaire des Manche"), Tooltip("Cette Variable permet de générer des vagues d'ennemies.")]
     public static int EnemiesAlive = 0;
+    [Space(10)]
     [Header("Point de spawn et Waypoint List"), Tooltip("Cette Variable permet de gére les point de spawn")]
     public List<Transform> SpawnPoint;
+    [Space(10)]
     public List<Waypoint_Script> WayPointsList;
+    [Space(10)]
     [Header("Nombre de Vagues"), Tooltip("Cette Variable permet de gére les vagues")]
     public Wave[] waves;
-    [SerializeField]
+    [Space(10)]
     [Header("Temp de chaque vagues "), Tooltip("Cette Variable permet de gére le Temp de Chaque vagues")]
-    private TMP_Text waveCountdoawnTimer;
-    [SerializeField]
-    [Header("Temp entre chaque vagues "), Tooltip("Cette Variable permet de gére le Temp entre chaque vagues")]
+    public float countdown = 5f;
+    [Space(5)]
+    public TMP_Text waveCountdoawnTimer;
+    [Space(10)]
     private float timeBetweenWaves = 5f;
-    [SerializeField]
-    private float countdown = 5f;
-    private int waveIndex = 0;
+    [Space(10)]
+    [Header("Audio Clip qui annonce les vagues"), Tooltip("Cette Variable permet de gére l'audio clip d'annonce des vagues")]
+    [Space (10)]
+    public AudioClip SoundWaveAnonnce;
+    AudioSource audioSource;
+    [Header("GameManager"), Tooltip("Cette Variable permet de gére le GameManager")]
     public GameManager gameManager;
-
+    [Space(10)]
+    private int waveIndex = 0;
+ 
 
 
 
     private void Start()
     {       
         EnemiesAlive = 0;
+        audioSource = new GameObject("AudioSource_WaveSpawner").AddComponent<AudioSource>();
     }
     void Update()
     {
@@ -73,6 +83,7 @@ public class WaveSpawner: MonoBehaviour
 
         Debug.Log("Apparitions d'une nouvelle vague");
         Player_Stat.Rounds++;
+        audioSource.PlayOneShot(SoundWaveAnonnce, 0.7F);
 
         //Delay entre chaque spawn
         for (int i = 0; i < wave.count; i++)

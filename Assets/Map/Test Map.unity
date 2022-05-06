@@ -19480,6 +19480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6015f16d4e502be448d176574e1c0ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: []
 --- !u!4 &1918393873
 Transform:
   m_ObjectHideFlags: 0
@@ -21844,9 +21845,29 @@ PrefabInstance:
       objectReference: {fileID: 1749516929}
     - target: {fileID: 4107738760359500480, guid: c4f897dc587e6ac4dbe376734bbf5b14,
         type: 3}
+      propertyPath: SoundWaveAnonnce
+      value: 
+      objectReference: {fileID: 8300000, guid: ade03cc41862efe45a14c4802b87b026, type: 3}
+    - target: {fileID: 4107738760359500480, guid: c4f897dc587e6ac4dbe376734bbf5b14,
+        type: 3}
       propertyPath: waveCountdoawnTimer
       value: 
       objectReference: {fileID: 942977746}
+    - target: {fileID: 4107738760359500480, guid: c4f897dc587e6ac4dbe376734bbf5b14,
+        type: 3}
+      propertyPath: SpawnPoint.Array.data[0]
+      value: 
+      objectReference: {fileID: 1749516929}
+    - target: {fileID: 4107738760359500480, guid: c4f897dc587e6ac4dbe376734bbf5b14,
+        type: 3}
+      propertyPath: WayPointsList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107738760359500480, guid: c4f897dc587e6ac4dbe376734bbf5b14,
+        type: 3}
+      propertyPath: WayPointsList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1918393872}
     - target: {fileID: 4107738760359500481, guid: c4f897dc587e6ac4dbe376734bbf5b14,
         type: 3}
       propertyPath: nodeUi

@@ -4,8 +4,13 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     //Fonction
+    [Header("PauseUi")]
     public GameObject ui;
+    [Space(10)]
+    [Header("SceenFader")]
     public SceenFader sceneFader;
+    [Space(10)]
+    [Header("Nom du Menu")]
     public string menuSceneName;
 
     void Update()
