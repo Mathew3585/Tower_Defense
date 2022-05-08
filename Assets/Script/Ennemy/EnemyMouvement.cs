@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -9,6 +10,9 @@ public class EnemyMouvement : MonoBehaviour
     private int waypoinIndex = 0;
     private Ennemy enemy;
     public Waypoint_Script Waypoint_Script;
+    public float Speed = 1f;
+    private Coroutine LookCorotine;
+    public Transform Mesh;
 
     void Start()
     {
@@ -46,9 +50,34 @@ public class EnemyMouvement : MonoBehaviour
         //Cherhcer le prochain waypoint
         waypoinIndex++;
         target = Waypoint_Script.point[waypoinIndex];
+        //transform.LookAt(target);
+        StartRotating();
 
     }
 
+    public void StartRotating()
+    {
+        if (LookCorotine != null)
+        {
+            StopCoroutine(LookCorotine);
+        }
+        LookCorotine = StartCoroutine(LookAt());
+    }
 
+    private IEnumerator LookAt()
+    {
+        Quaternion lookRotation = Quaternion.LookRotation(target.position - Mesh.position);
+
+        float time = 0;
+
+        while (time < 1)
+        {
+            Mesh.rotation = Quaternion.Slerp(Mesh.rotation, lookRotation, time);
+
+            time += Time.deltaTime * Speed;
+
+            yield return null;
+        }
+    }
 
 } 

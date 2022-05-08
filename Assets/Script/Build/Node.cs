@@ -26,7 +26,7 @@ public class Node : MonoBehaviour
     private void Start()
     {
         rend = GetComponent<Renderer>();
-        StartColor = rend.material.color;
+        //StartColor = rend.material.color;
         buildManager = BuildManager.instance;
 
     }
@@ -144,19 +144,19 @@ public class Node : MonoBehaviour
 
 
         //Pemet de changer la couleur des nodes quand le joueur a de le'argent ou non
-        if (buildManager.hasMoney)
+        //if (buildManager.hasMoney)
         {
-            rend.material.color = hoverColor;
+            //rend.material.color = hoverColor;
         }
-        else
+        //else
         {
-            rend.material.color = NoEnoughtMoneyColor;
+            //rend.material.color = NoEnoughtMoneyColor;
         }
     }
 
     //Permet de decter quand la souris sort de la node
     private void OnMouseExit()
     {
-        rend.material.color = StartColor;
+        //rend.material.color = StartColor;
     }
 }

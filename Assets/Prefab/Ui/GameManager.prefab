@@ -49,8 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverUi: {fileID: 0}
+  AudioGameOver: {fileID: 8300000, guid: d314fccd0b0084440b22212311628aa8, type: 3}
   SceneFader: {fileID: 0}
   completLevelUI: {fileID: 0}
+  AudioWinLevel: {fileID: 8300000, guid: ee73ddd5db244f3449a730e3bcbcf261, type: 3}
 --- !u!114 &4107738760359500480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +65,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891abffd8f15e840a5752d471be3da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPoint:
+  - {fileID: 0}
+  WayPointsList: []
   waves:
   - enemy: {fileID: 3649317741251193080, guid: fba2b9dc3e8e7f646907687d6c9f635b, type: 3}
     count: 1
@@ -97,10 +102,9 @@ MonoBehaviour:
   - enemy: {fileID: 3649317741251193080, guid: f10b704d8390308409a6efffdb651cbd, type: 3}
     count: 1
     rate: 2
-  SpawnPoint: {fileID: 0}
-  waveCountdoawnTimer: {fileID: 0}
-  timeBetweenWaves: 5
   countdown: 5.02
+  waveCountdoawnTimer: {fileID: 0}
+  SoundWaveAnonnce: {fileID: 8300000, guid: 3c14bf6080b50ce4abdd8c046470e08e, type: 3}
   gameManager: {fileID: 4107738760359500485}
 --- !u!114 &4107738760359500481
 MonoBehaviour:
@@ -119,6 +123,8 @@ MonoBehaviour:
     type: 3}
   ParticuleSell: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
     type: 3}
+  AudioBuild: {fileID: 0}
+  AudioSell: {fileID: 0}
 --- !u!114 &4107738760359500482
 MonoBehaviour:
   m_ObjectHideFlags: 0
