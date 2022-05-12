@@ -497,7 +497,6 @@ GameObject:
   - component: {fileID: 3884008150067836666}
   - component: {fileID: 4562740339214597486}
   - component: {fileID: 5623983036328034622}
-  - component: {fileID: 9163411962062512916}
   - component: {fileID: 4198267858754539461}
   m_Layer: 12
   m_Name: Ennemies Boss
@@ -559,19 +558,6 @@ MonoBehaviour:
   Waypoint_Script: {fileID: 0}
   Speed: 0.2
   Mesh: {fileID: 8318308911323766410}
---- !u!65 &9163411962062512916
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879842593309565172}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.74, y: 8.43, z: 17.65}
-  m_Center: {x: 0, y: 4.2, z: -0.44}
 --- !u!54 &4198267858754539461
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2145,6 +2131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8911905290405505541}
   - component: {fileID: 3767341023627159052}
+  - component: {fileID: 6557921528786903380}
   m_Layer: 12
   m_Name: Ennemi5_fini
   m_TagString: Untagged
@@ -2210,6 +2197,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &6557921528786903380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135367933883527359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.42, y: 8.43, z: 6.31}
+  m_Center: {x: 0.56, y: 1.2, z: 0}
 --- !u!1 &8459999300803086130
 GameObject:
   m_ObjectHideFlags: 0
