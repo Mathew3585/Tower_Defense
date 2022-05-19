@@ -18,9 +18,14 @@ public class Player_Stat : MonoBehaviour
 
     public void Start()
     {
-        Rounds = 0; 
+        Rounds = 0;
         money = startmoney;
         lives = startLife;
+    }
+
+    public void LifeTimeUpagrade()
+    {
+        lives = lives + 20;
     }
 
 }

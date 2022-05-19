@@ -40,7 +40,7 @@ public class BuildManager : MonoBehaviour
     //Mettre un tourelle 
 
 
-    public void SelectTurretToBuild(TourelleBleuprint turret)
+    public void SelectTurretToBuild(TourelleBleuprint turret) 
     {
         turretToBluid = turret;
         selectedNode = null;
@@ -63,14 +63,14 @@ public class BuildManager : MonoBehaviour
             DeselecetNode();
             return;
         }
-         
+        Debug.Log("Ok tourelle séléctioner");
         selectedNode = node;
         turretToBluid = null;
         nodeUi.SetTarget(node);
     }
 
     //Permet de déselect un node
-     public void DeselecetNode()
+    public void DeselecetNode()
     {
         selectedNode = null;
         nodeUi.Hide();

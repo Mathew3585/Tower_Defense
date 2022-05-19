@@ -201,4 +201,9 @@ public class Tourelle : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+    public void FireRatetimeUpgarde()
+    {
+        FireRate = FireRate * 2;
+    }
 }

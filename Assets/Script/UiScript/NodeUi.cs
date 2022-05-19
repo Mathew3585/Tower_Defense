@@ -8,13 +8,14 @@ public class NodeUi : MonoBehaviour
     public GameObject Ui;
     [HideInInspector]
     public Node target;
-
+    Tourelle tourelle;
     public TMP_Text sellAmout;
     public TMP_Text upgradeCost;
     public Button upgradeButton;
 
     public void SetTarget (Node _target)
     {
+        
         target = _target;
         transform.position = target.GetBuildPosition();
 

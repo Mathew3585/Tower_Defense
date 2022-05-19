@@ -17,6 +17,6 @@ public class GameOver : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1;
-        sceneFader.FadeTo(menuSceneName); 
+        sceneFader.FadeTo(menuSceneName);
     }
 }

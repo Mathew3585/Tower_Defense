@@ -15,6 +15,7 @@ public class Node : MonoBehaviour
     public TourelleBleuprint turretBlueprint;
     [HideInInspector]
     public bool isUpgraded = false;
+    public bool useLaser;
 
     private Renderer rend;
 
