@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Module : MonoBehaviour
 {
+    public List<GameObject> TurretList = new List<GameObject>();
     public Canvas canvas;
     public int cost;
     // Update is called once per frame
@@ -48,5 +49,14 @@ public class Module : MonoBehaviour
     public Vector3 GetBuildPosition()
     {
         return transform.position;
+    }
+
+    void Update()
+    {
+        foreach (GameObject TurretObj in GameObject.FindGameObjectsWithTag("Turret"))
+        {
+
+            TurretList.Add(TurretObj);
+        }
     }
 }

@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: -7340306863288688963}
   m_Layer: 0
   m_Name: Missile Launcher Upgrade
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,6 +289,9 @@ MonoBehaviour:
   linerender: {fileID: 0}
   impactEffect: {fileID: 0}
   ImpactParticule: {fileID: 0}
+  soundsLazer: []
+  volumeChangeMultiplierLazer: 0.2
+  pitchChangeMultiplierLazer: 0.2
 --- !u!82 &-7340306863288688963
 AudioSource:
   m_ObjectHideFlags: 0

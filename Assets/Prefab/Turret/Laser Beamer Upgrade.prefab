@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -5629167107108092293}
   m_Layer: 0
   m_Name: Laser Beamer Upgrade
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,9 @@ MonoBehaviour:
   linerender: {fileID: 546648340596637472}
   impactEffect: {fileID: 4956210374551161539}
   ImpactParticule: {fileID: 7889578143614801047}
+  soundsLazer: []
+  volumeChangeMultiplierLazer: 0.2
+  pitchChangeMultiplierLazer: 0.2
 --- !u!82 &-5629167107108092293
 AudioSource:
   m_ObjectHideFlags: 0
