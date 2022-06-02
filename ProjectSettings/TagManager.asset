@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Module
   - Ground
+  - "D\xE9gatImage"
   layers:
   - Default
   - TransparentFX

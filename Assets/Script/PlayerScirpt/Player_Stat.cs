@@ -10,7 +10,15 @@ public class Player_Stat : MonoBehaviour
     [Header("Argent du joueur de base"), Tooltip("Cette Variable permet de gére l'argent  du joueur")]
     public int startmoney = 400;
     [Space(10)]
-    public static int lives;
+    private static int _lives;
+
+
+    public static int lives
+    {
+        get { return _lives; }
+        set { Debug.Log(value); _lives = value; }
+    }
+
     [Header("Vie du joueur de base"), Tooltip("Cette Variable permet de gére la vie du joueur")]
     public int startLife = 100;
 

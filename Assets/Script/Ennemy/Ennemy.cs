@@ -27,7 +27,11 @@ public class Ennemy : MonoBehaviour
     private bool isDead = false;
     [Header("Gérer le Camera Shake"), Tooltip("Cette Variable permet de gérer le camera shake")]
     public CameraShaker camerashake;
-    private GameManager gameManager;
+    public GameObject ImageDegat;
+    public GameObject ImageLowLife;
+    public GameObject meshRenderer;
+    private Collider collider;
+    [SerializeField] GameObject Ui;
     public float DurationShake = 0.15f;
     public float MagnitueShake = 0.4f;
 
@@ -35,6 +39,11 @@ public class Ennemy : MonoBehaviour
     //Permet d'apliquer une vitesse a speed 
     public void Start()
     {
+
+        ImageDegat = GameManager.instance.ImageDégat;
+        ImageLowLife = GameManager.instance.ImageLowLife;
+        collider = GetComponent<Collider>();
+        Debug.Log(ImageDegat);
         camerashake = Camera.main.gameObject.GetComponent<CameraShaker>();
         speed = StartSpeed;
         Health = StartHealth;
@@ -76,9 +85,47 @@ public class Ennemy : MonoBehaviour
     //permet de mettre des dégat au joueur quand il arrive a la fin des waypoints
     public void EndOfPath()
     {
+        if (isDead)
+        {
+            return;
+        }
+        else if (!isDead)
+        {
+            isDead = true;
+            Player_Stat.lives -= dammage;
+            Debug.Log("DommageUi");
+            WaveSpawner.EnemiesAlive--;
+            StartCoroutine("DommageUi");
+            if(Player_Stat.lives <= 40)
+            {
+                StartCoroutine("Dommage20hp");
+            }
+
+        }
+
+    }
+
+    IEnumerator DommageUi()
+    {
+        ImageDegat.SetActive(true);
+        meshRenderer.SetActive(false);
+        collider.enabled = false;
+        Ui.SetActive(false);
         CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
-        Player_Stat.lives -= dammage;
-        WaveSpawner.EnemiesAlive--;
+        yield return new WaitForSeconds(3);
+        ImageDegat.SetActive(false);
         Destroy(gameObject);
     }
+
+
+    IEnumerator Dommage20hp()
+    {
+        ImageDegat.SetActive(true);
+        ImageLowLife.SetActive(true);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
+        yield return new WaitForSeconds(3);
+        ImageDegat.SetActive(false);
+        ImageLowLife.SetActive(false);
+    }
+
 }
