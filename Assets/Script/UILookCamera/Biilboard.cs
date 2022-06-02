@@ -14,6 +14,7 @@ public class Biilboard : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.LookAt(transform.position + cam.forward);
+        transform.LookAt(transform.position + cam.forward + cam.up);
+        Debug.Log(cam.position);
     }
 }
