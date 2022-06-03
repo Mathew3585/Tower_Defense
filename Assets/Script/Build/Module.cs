@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DefaultExecutionOrder(-25)]
 public class Module : MonoBehaviour
 {
-    public List<GameObject> TurretList = new List<GameObject>();
+    public static Module instance;
+
+    private List<Tourelle> TurretList = new List<Tourelle>();
     public Canvas canvas;
     public int cost;
+
+    void Start()
+    {
+        instance = this; 
+    }
+
     // Update is called once per frame
     void MouseUpdate()  
     {
@@ -51,12 +60,36 @@ public class Module : MonoBehaviour
         return transform.position;
     }
 
-    void Update()
+    public void AddTurret(Tourelle t)
     {
-        foreach (GameObject TurretObj in GameObject.FindGameObjectsWithTag("Turret"))
-        {
+        TurretList.Add(t);
+        Debug.Log(t);
+    }
 
-            TurretList.Add(TurretObj);
+    public void RemoveTurret(Tourelle t)
+    {
+        TurretList.Remove(t);
+        Debug.Log(t);
+    }
+    
+    public void FireRate()
+    {
+        StartCoroutine("FireRateUp");
+    }
+
+
+    IEnumerator FireRateUp()
+    {
+        foreach (Tourelle t in TurretList)
+        {
+            t.FireRate++;
+        }
+
+        yield return new WaitForSeconds(10);
+
+        foreach (Tourelle t in TurretList)
+        {
+            t.FireRate--;
         }
     }
 }

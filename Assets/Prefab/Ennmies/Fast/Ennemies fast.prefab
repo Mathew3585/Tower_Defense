@@ -57,6 +57,10 @@ MonoBehaviour:
   deadEffect: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
   healthbar: {fileID: 1633363905644631711}
   camerashake: {fileID: 0}
+  ImageDegat: {fileID: 0}
+  ImageLowLife: {fileID: 0}
+  meshRenderer: {fileID: 8217104216347825188}
+  Ui: {fileID: 3157024430879177590}
   DurationShake: 0.15
   MagnitueShake: 0.4
 --- !u!114 &4953291347973230523
@@ -397,6 +401,7 @@ GameObject:
   - component: {fileID: 1395208201486011553}
   - component: {fileID: 4729756660079258968}
   - component: {fileID: 798812312334293591}
+  - component: {fileID: 5737861045582927329}
   m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
@@ -485,6 +490,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5737861045582927329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3157024430879177590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de12e6237a861f34fb1e2f5cc5f86b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &4695631186940621990
 GameObject:
   m_ObjectHideFlags: 0

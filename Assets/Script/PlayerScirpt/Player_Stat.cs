@@ -30,10 +30,4 @@ public class Player_Stat : MonoBehaviour
         money = startmoney;
         lives = startLife;
     }
-
-    public void LifeTimeUpagrade()
-    {
-        lives = lives + 20;
-    }
-
 }

@@ -51,9 +51,15 @@ public class Tourelle : MonoBehaviour
     //Lancer en boucle la fonctions Updatetarget
     void Start()
     {
+        Module.instance.AddTurret(this);
         source = GetComponent<AudioSource>();
         sourceLazer = GetComponent<AudioSource>();
         InvokeRepeating("Updatetarget", 0f, 0.5f);
+    }
+
+    private void OnDestroy()
+    {
+        Module.instance.RemoveTurret(this);
     }
 
     //Chercher les ennemis sur la map et les mettre dans une liste 

@@ -15,6 +15,5 @@ public class Biilboard : MonoBehaviour
     void LateUpdate()
     {
         transform.LookAt(transform.position + cam.forward + cam.up);
-        Debug.Log(cam.position);
     }
 }
