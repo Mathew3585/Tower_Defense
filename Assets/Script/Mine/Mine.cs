@@ -7,6 +7,7 @@ public class Mine : MonoBehaviour
     public float explosionRadius = 10f;
 
     public GameObject impacteffect;
+    public int damage = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,15 @@ public class Mine : MonoBehaviour
 
     void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Ennemy e = enemy.GetComponent<Ennemy>();
+        if (e != null)
+        {
+            e.TakeDommage(damage);
+        }
+        else
+        {
+            Debug.LogError("Pas de script Enemy sur l'énemi.");
+        }
     }
 
     private void OnDrawGizmosSelected()
