@@ -8,7 +8,7 @@ public class BiilboardTuto : MonoBehaviour
 
     void Start()
     {
-       cam = GameManager.instance.camera;
+       cam = GameManagerTuto.instance.camera;
     }   
 
     // Update is called once per frame

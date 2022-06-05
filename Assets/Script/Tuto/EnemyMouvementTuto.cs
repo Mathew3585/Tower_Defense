@@ -8,7 +8,7 @@ public class EnemyMouvementTuto : MonoBehaviour
     //Fonction
     private Transform target;
     private int waypoinIndex = 0;
-    private Ennemy enemy;
+    private EnnemyTuto enemy;
     public Waypoint_Script Waypoint_Script;
     public float Speed = 1f;
     private Coroutine LookCorotine;
@@ -17,7 +17,7 @@ public class EnemyMouvementTuto : MonoBehaviour
     void Start()
     {
 
-        enemy = GetComponent<Ennemy>();
+        enemy = GetComponent<EnnemyTuto>();
         target = Waypoint_Script.point[0];
     }
 

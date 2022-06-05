@@ -32,7 +32,7 @@ public class TutoManagerTuto : MonoBehaviour
     public void Start()
     {
         ShopTurret.onClick.AddListener(() => ShopCilck = true);
-        UpagradeButton.onClick.AddListener(() => UpagradeClick = true);
+        //UpagradeButton.onClick.AddListener(() => UpagradeClick = true);
         _timer += Time.deltaTime;
         gameManager.SetActive(false);
         ClickMouseBlocker.SetActive(true);
@@ -90,7 +90,6 @@ public class TutoManagerTuto : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex++;
-                Debug.Log(popUpIndex);
                 _timer = 0;
                 SpectrumScript.instance.StartAudio(ListAudio[1]);
 
@@ -105,7 +104,6 @@ public class TutoManagerTuto : MonoBehaviour
                 popUpIndex++;
                 SpectrumScript.instance.StartAudio(ListAudio[2]);
                 ClickMouseBlocker.SetActive(false);
-                Debug.Log(popUpIndex);
             }
         }
         else if (popUpIndex == 2)
@@ -114,7 +112,6 @@ public class TutoManagerTuto : MonoBehaviour
             {
                 _timer = 0;
                 popUpIndex++;
-                Debug.Log(popUpIndex);
                 gameManager.SetActive(true);
                 SpectrumScript.instance.StartAudio(ListAudio[3]);
             }
@@ -124,32 +121,25 @@ public class TutoManagerTuto : MonoBehaviour
             ShopCilck = false;
             _timer = 0;
             popUpIndex++;
-            Debug.Log(popUpIndex);
             SpectrumScript.instance.StartAudio(ListAudio[4]);
         }
-        else if (popUpIndex == 4 && ShopCilck)
+        else if (popUpIndex == 4)
         {
             popUpIndex++;
-            ShopCilck = false;
             _timer = 0;
             gameManager.SetActive(false);
-            Debug.Log(popUpIndex);
             SpectrumScript.instance.StartAudio(ListAudio[5]);
         }
-        else if (popUpIndex == 5)
+        else if (popUpIndex == 5 )
         {
-            UpagradeClick = false;
             _timer = 0;
             popUpIndex++;
-            Debug.Log(popUpIndex);
             SpectrumScript.instance.StartAudio(ListAudio[6]);
         }
-        else if (popUpIndex == 6 && UpagradeClick)
+        else if (popUpIndex == 6)
         {
-            UpagradeClick = false;
             _timer = 0;
             popUpIndex++;
-            Debug.Log(popUpIndex);
             SpectrumScript.instance.StartAudio(ListAudio[7]);
         }
         else if (popUpIndex == 7)
@@ -158,7 +148,6 @@ public class TutoManagerTuto : MonoBehaviour
             {
                 _timer = 0;
                 popUpIndex++;
-                Debug.Log(popUpIndex);
                 SpectrumScript.instance.StartAudio(ListAudio[8]);
                 tutoManager.SetActive(false);
             }
