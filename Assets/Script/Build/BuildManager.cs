@@ -22,7 +22,9 @@ public class BuildManager : MonoBehaviour
     //Fonctions
 
     private TourelleBleuprint turretToBluid;
+    private MineBleuprint mineBleuprint;
     private Node selectedNode;
+    private NodeMine selectedNodeMine;
     [Header("Node")]
     public NodeUi nodeUi;
     [Header("Particule de Construction")]
@@ -42,7 +44,16 @@ public class BuildManager : MonoBehaviour
 
     public void SelectTurretToBuild(TourelleBleuprint turret) 
     {
+
         turretToBluid = turret;
+        selectedNode = null;
+
+        DeselecetNode();
+    }
+
+    public void SelectMineTobuild(MineBleuprint mine)
+    {
+        mineBleuprint = mine;
         selectedNode = null;
 
         DeselecetNode();
@@ -52,6 +63,11 @@ public class BuildManager : MonoBehaviour
     public TourelleBleuprint GetTuretToBuild()
     {
         return turretToBluid;
+    }
+
+    public MineBleuprint GetMinetobuild()
+    {
+        return mineBleuprint;
     }
 
     //Pemermet de savoir si une tourelle et selectionner et afficher Le nodeUi
@@ -67,6 +83,19 @@ public class BuildManager : MonoBehaviour
         selectedNode = node;
         turretToBluid = null;
         nodeUi.SetTarget(node);
+    }
+
+    public void SelectedNodeMine(NodeMine nodemine)
+    {
+
+        if (nodemine == selectedNodeMine)
+        {
+            DeselecetNode();
+            return;
+        }
+        Debug.Log("Ok Mine select");
+        selectedNodeMine = nodemine;
+        turretToBluid = null;
     }
 
     //Permet de déselect un node

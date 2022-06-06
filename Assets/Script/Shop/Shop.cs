@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
     public TourelleBleuprint standarTourelle;
     public TourelleBleuprint MissileLancherTurrette;
     public TourelleBleuprint LazerBeamerTurrette;
+    public MineBleuprint MineExplosive;
 
     //Chercher le build manager
     private void Start()
@@ -33,5 +34,10 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Séléction de la tourelle Lazer !!");
         buildManager.SelectTurretToBuild(LazerBeamerTurrette);
+    }
+    public void SelectMine()
+    {
+        Debug.Log("Séléction de la Mine!!");
+        buildManager.SelectMineTobuild(MineExplosive);
     }
 }
