@@ -4196,6 +4196,9 @@ MonoBehaviour:
     upgradePrefab: {fileID: 725828627546867007, guid: 65c92a973bc7573478e84d9e9cae191c,
       type: 3}
     upgradeCost: 600
+  MineExplosive:
+    prefab: {fileID: 0}
+    cost: 0
 --- !u!114 &395347308
 MonoBehaviour:
   m_ObjectHideFlags: 0
