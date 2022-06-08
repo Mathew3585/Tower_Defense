@@ -29,4 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Map/Level 4.unity
     guid: 1b9d2322475ff9c41852f3e587df4644
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: b1ee7bdff7191cf48bfa3d508657a2f7,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 7e05104ca48de99498c3fadcfb870e7a,
+      type: 2}

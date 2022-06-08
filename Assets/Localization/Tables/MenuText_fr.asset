@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MenuText_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: c3c0ced294df58e4ab16b3d13aa99aa7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 52632649728
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 883746570240
+    m_Localized: Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010129338368
+    m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1612024545280
+    m_Localized: Tuto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1678785282048
+    m_Localized: Histoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811191070720
+    m_Localized: Mode Inifinit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2375194935296
+    m_Localized: Graphisme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2537791324160
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2652400680960
+    m_Localized: Fps limite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2763918835712
+    m_Localized: "Luminosit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3079930281984
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3149987741696
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3184729161728
+    m_Localized: "Contr\xF4le"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4672536870912
+    m_Localized: Volume
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

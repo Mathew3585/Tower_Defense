@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: MenuText Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: MenuText
+  m_TableCollectionNameGuidString: c3c0ced294df58e4ab16b3d13aa99aa7
+  m_Entries:
+  - m_Id: 52632649728
+    m_Key: Play Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 883746570240
+    m_Key: Option Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010129338368
+    m_Key: Quit Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1612024545280
+    m_Key: Tuto Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1678785282048
+    m_Key: Story Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811191070720
+    m_Key: Inifinit Mode Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2375194935296
+    m_Key: Graphisme Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2537791324160
+    m_Key: "R\xE9solution Option"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2652400680960
+    m_Key: Fps limite Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2763918835712
+    m_Key: Brithness Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3079930281984
+    m_Key: Retour Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3149987741696
+    m_Key: Audio Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3184729161728
+    m_Key: Controlle Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4672536870912
+    m_Key: Volume Option
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7847037663597035572
+  references:
+    version: 2
+    RefIds:
+    - rid: 7847037663597035572
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1654709004454

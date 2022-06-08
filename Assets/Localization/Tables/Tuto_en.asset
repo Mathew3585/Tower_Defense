@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tuto_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b429c1fd76c6a864889c15c5a69e45de, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 24790859776
+    m_Localized: 'Hello recruit #308, welcome to the training simulator. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57795837952
+    m_Localized: 'We will teach you all the basics of protecting the colonies.
+
+      In
+      order to defend us, you will have to learn how to use our weapon system: the
+      turrets.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61788815360
+    m_Localized: Start by buying your first turret.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66188640256
+    m_Localized: Place your turret on the available slots by clicking on a base.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75898454016
+    m_Localized: Each enemy you kill brings you several rare crystals called Maven.
+      Use these to upgrade your turrets by clicking on them
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81447518208
+    m_Localized: Be strategic in placing and upgrading your turrets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91987804160
+    m_Localized: 'Simulation 1 completed. We will now move on to the second simulation:
+      the utilities.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
