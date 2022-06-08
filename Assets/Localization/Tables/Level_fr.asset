@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Level_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: ec2eab6d6214e884092b42d20ffc15dd, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1405262135296
+    m_Localized: Temp de la partie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2039843553280
+    m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2411513413632
+    m_Localized: "Niveau gagn\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7350943744
+    m_Localized: "Am\xE9liorer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 167825014784
+    m_Localized: Vendre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 612203134976
+    m_Localized: Perdue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775957151744
+    m_Localized: "Tu n'a pas r\xE9ussie "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 897784905728
+    m_Localized: "R\xE9essayer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1096674607104
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1276782215168
+    m_Localized: "Vagues surv\xE9cu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2246551437312
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2647086497792
+    m_Localized: Vous remportez la mission Bravo soldat
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
