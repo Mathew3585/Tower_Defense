@@ -9,6 +9,7 @@ TagManager:
   - Module
   - Ground
   - Turret
+  - Node
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - 'Environement '
   - Ennemies
   - NodeMine
-  - 
+  - Node
   - 
   - 
   - 

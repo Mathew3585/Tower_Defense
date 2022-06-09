@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour
     public TourelleBleuprint MissileLancherTurrette;
     public TourelleBleuprint LazerBeamerTurrette;
     public MineBleuprint MineExplosive;
+    public GameObject TurretBasicGosth;
 
     //Chercher le build manager
     private void Start()
