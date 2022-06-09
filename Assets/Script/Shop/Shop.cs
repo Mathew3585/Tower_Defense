@@ -45,6 +45,6 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Séléction de la Mine!!");
         buildManager.SelectMineTobuild(MineExplosive);
-        Instantiate(GoshtTurretSimple);
+        Instantiate(GoshtMine);
     }
 }
