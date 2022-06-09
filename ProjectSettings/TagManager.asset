@@ -9,6 +9,7 @@ TagManager:
   - Module
   - Ground
   - Turret
+  - Node
   layers:
   - Default
   - TransparentFX
