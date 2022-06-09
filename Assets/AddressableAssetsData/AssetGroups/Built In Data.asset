@@ -15,11 +15,7 @@ MonoBehaviour:
   m_GroupName: Built In Data
   m_Data:
     m_SerializedData: []
-<<<<<<< Updated upstream
   m_GUID: f1398ec8c8b2892449b0a07c7df4d89e
-=======
-  m_GUID: c301038e5ad56664aa07cc1424f74692
->>>>>>> Stashed changes
   m_SerializeEntries:
   - m_GUID: Resources
     m_Address: Resources
@@ -30,14 +26,7 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
   m_ReadOnly: 1
-<<<<<<< Updated upstream
   m_Settings: {fileID: 11400000, guid: 7cefa5b96f16645449582ef674a4f96b, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 1510170abecaf294cb2846715ae801d7, type: 2}
-=======
-  m_Settings: {fileID: 11400000, guid: 34cd4b4b0058f2f4a8e34e685faaadf7, type: 2}
-  m_SchemaSet:
-    m_Schemas:
-    - {fileID: 11400000, guid: 0cd8efdacf449a74ab06d7606329173e, type: 2}
->>>>>>> Stashed changes

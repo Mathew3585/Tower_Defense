@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a189bb168d8d90478a09ea08c2f3d72, type: 3}
   m_Name: DefaultObject
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   m_AddressableAssetSettingsGuid: 7cefa5b96f16645449582ef674a4f96b
-=======
-  m_AddressableAssetSettingsGuid: 34cd4b4b0058f2f4a8e34e685faaadf7
->>>>>>> Stashed changes
