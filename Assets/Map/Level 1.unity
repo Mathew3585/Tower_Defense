@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12621467}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.41, y: -18.76, z: -88.43}
+  m_LocalPosition: {x: 2.41, y: -15.6, z: -88.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5092,7 +5092,7 @@ PrefabInstance:
     - target: {fileID: 7561627195466440582, guid: 3afedb5fb5d578d4d9bdfc25ab8c000a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.28
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7561627195466440582, guid: 3afedb5fb5d578d4d9bdfc25ab8c000a,
         type: 3}
@@ -6755,7 +6755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a66589195adf164f9936aac7c06fe22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peopleList: []
 --- !u!4 &997401964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8995861897547017994, guid: 9fedf7037bc2fa548860fd56d6fec1e3,
@@ -7793,6 +7792,13 @@ MonoBehaviour:
   MineExplosive:
     prefab: {fileID: 0}
     cost: 0
+  GoshtTurretSimple: {fileID: 6017082047773626107, guid: 4f45bb2e07d4ae044b3650456d4a45fb,
+    type: 3}
+  GoshtMissileLancherTuret: {fileID: 0}
+  GoshtLazerBeamer: {fileID: 5747978675308600607, guid: 360e8fcbeb530f1428b767bb5cee7a56,
+    type: 3}
+  GoshtMine: {fileID: 5000785574173335545, guid: 22b5c56c474a64a48bd1aa136172b654,
+    type: 3}
 --- !u!114 &1219823223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12243,7 +12249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881267649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -16.86, z: -46.22}
+  m_LocalPosition: {x: 4.5, y: -13.8, z: -46.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13874,7 +13880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026616418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.74, y: -14.55, z: -44.46}
+  m_LocalPosition: {x: -16.74, y: -9.1, z: -44.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
