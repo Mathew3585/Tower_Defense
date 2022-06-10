@@ -84,6 +84,10 @@ MonoBehaviour:
     m_Localized: English
     m_Metadata:
       m_Items: []
+  - m_Id: 584300298084352
+    m_Localized: Library
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

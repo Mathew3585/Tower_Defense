@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: Anglais
     m_Metadata:
       m_Items: []
+  - m_Id: 584300298084352
+    m_Localized: "Biblioth\xE8que\r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

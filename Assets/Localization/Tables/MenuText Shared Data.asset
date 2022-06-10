@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: English Change Language
     m_Metadata:
       m_Items: []
+  - m_Id: 584300298084352
+    m_Key: "Biblioth\xE8que\r Menu\n\n"
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
