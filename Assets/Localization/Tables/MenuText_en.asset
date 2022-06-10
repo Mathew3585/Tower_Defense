@@ -88,6 +88,18 @@ MonoBehaviour:
     m_Localized: Library
     m_Metadata:
       m_Items: []
+  - m_Id: 764018652774400
+    m_Localized: Part 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 764118330408960
+    m_Localized: Part 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 764143118745600
+    m_Localized: Part 3
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

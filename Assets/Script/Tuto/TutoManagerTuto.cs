@@ -123,8 +123,9 @@ public class TutoManagerTuto : MonoBehaviour
             popUpIndex++;
             SpectrumScript.instance.StartAudio(ListAudio[4]);
         }
-        else if (popUpIndex == 4)
+        else if (popUpIndex == 4 && ShopCilck)
         {
+            ShopCilck = false;
             popUpIndex++;
             _timer = 0;
             gameManager.SetActive(false);
@@ -132,9 +133,13 @@ public class TutoManagerTuto : MonoBehaviour
         }
         else if (popUpIndex == 5 )
         {
-            _timer = 0;
-            popUpIndex++;
-            SpectrumScript.instance.StartAudio(ListAudio[6]);
+            if(Input.GetMouseButtonDown(0))
+            {
+                _timer = 0;
+                popUpIndex++;
+                SpectrumScript.instance.StartAudio(ListAudio[6]);
+            }
+
         }
         else if (popUpIndex == 6)
         {

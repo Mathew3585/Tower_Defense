@@ -9,16 +9,16 @@ public class EnemyMouvementTuto : MonoBehaviour
     private Transform target;
     private int waypoinIndex = 0;
     private EnnemyTuto enemy;
-    public Waypoint_Script Waypoint_Script;
+    public Waypoint_ScriptTuto Waypoint_Script;
     public float Speed = 1f;
     private Coroutine LookCorotine;
     public Transform Mesh;
 
     void Start()
     {
-
         enemy = GetComponent<EnnemyTuto>();
         target = Waypoint_Script.point[0];
+
     }
 
     //Déplacer les personnages énnemies au niveaux des waypoints

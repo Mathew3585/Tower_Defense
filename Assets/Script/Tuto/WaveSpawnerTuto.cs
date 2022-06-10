@@ -14,7 +14,7 @@ public class WaveSpawnerTuto : MonoBehaviour
     [Header("Point de spawn et Waypoint List"), Tooltip("Cette Variable permet de gére les point de spawn")]
     public List<Transform> SpawnPoint;
     [Space(10)]
-    public List<Waypoint_Script> WayPointsList;
+    public List<Waypoint_ScriptTuto> WayPointsList;
     [Space(10)]
     [Header("Nombre de Vagues"), Tooltip("Cette Variable permet de gére les vagues")]
     public Wave[] waves;
@@ -101,6 +101,6 @@ public class WaveSpawnerTuto : MonoBehaviour
     {
         int Rand = Random.Range(0, WayPointsList.Count);
         var currentEnemy = Instantiate(enemy, SpawnPoint[Rand].position, SpawnPoint[Rand].rotation);
-        currentEnemy.GetComponent<EnemyMouvement>().Waypoint_Script = WayPointsList[Rand];
+        currentEnemy.GetComponent<EnemyMouvementTuto>().Waypoint_Script = WayPointsList[Rand];
     }
 }

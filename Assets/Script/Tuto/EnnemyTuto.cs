@@ -77,7 +77,7 @@ public class EnnemyTuto : MonoBehaviour
         GameObject deathParticule = (GameObject)Instantiate(deadEffect, transform.position, Quaternion.identity);
         Destroy(deathParticule, 2f);
 
-        WaveSpawner.EnemiesAlive--;
+        WaveSpawnerTuto.EnemiesAlive--;
 
         Destroy(gameObject);
     }
@@ -94,7 +94,7 @@ public class EnnemyTuto : MonoBehaviour
             isDead = true;
             Player_Stat.lives -= dammage;
             Debug.Log("DommageUi");
-            WaveSpawner.EnemiesAlive--;
+            WaveSpawnerTuto.EnemiesAlive--;
             StartCoroutine("DommageUi");
             if(Player_Stat.lives <= 40)
             {
