@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LibraryTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: LibraryTable
+  m_TableCollectionNameGuidString: 930174c5b7f9bb54782d0088c8d52105
+  m_Entries:
+  - m_Id: 8491794432
+    m_Key: 'Artilleur S-ONE(Tourelle basique)
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169930555392
+    m_Key: Balistique S-22(Tourelle Lance Missile)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295881310208
+    m_Key: Laser S-713(Tourelle Lazer)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467382206464
+    m_Key: "IEM S-106 (Tourelle \xE9l\xE9ctrique)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27055637299200
+    m_Key: "Drone terrestre \u201CStealth\u201D (ennemies normal)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27191960567808
+    m_Key: "Cuirasse \u201CMastock\u201D  (Ennemie level 2)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27308356698112
+    m_Key: "Eclaireur \u201CDNT (Did not see)\u201D  (Ennemies rapides)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27412417380352
+    m_Key: "Char \u201CThe Savior\u201D "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27542654713856
+    m_Key: "Supercanon \u201CL\u2019Excavateur\u201D\r\n"
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7847037722319650818
+  references:
+    version: 2
+    RefIds:
+    - rid: 7847037722319650818
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1654966378597

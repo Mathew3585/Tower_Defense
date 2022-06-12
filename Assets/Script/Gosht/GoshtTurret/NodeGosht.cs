@@ -6,6 +6,8 @@ using UnityEngine;
 public class NodeGosht : MonoBehaviour
 {
     private Action callback;
+    
+
 
     public void Setup(Action cb)
     {

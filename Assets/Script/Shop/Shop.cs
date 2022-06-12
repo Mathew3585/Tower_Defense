@@ -7,10 +7,12 @@ public class Shop : MonoBehaviour
     public TourelleBleuprint standarTourelle;
     public TourelleBleuprint MissileLancherTurrette;
     public TourelleBleuprint LazerBeamerTurrette;
+    public TourelleBleuprint ElectriqueBeamerTurrette;
     public MineBleuprint MineExplosive;
     public GameObject GoshtTurretSimple;
     public GameObject GoshtMissileLancherTuret;
     public GameObject GoshtLazerBeamer;
+    public GameObject GoshtElectriquebeamer;
     public GameObject GoshtMine;
     //Chercher le build manager
     private void Start()
@@ -40,6 +42,13 @@ public class Shop : MonoBehaviour
         Debug.Log("Séléction de la tourelle Lazer !!");
         buildManager.SelectTurretToBuild(LazerBeamerTurrette);
         Instantiate(GoshtLazerBeamer);
+    }
+    public void SelectEletriqueBeamer()
+    {
+        Debug.Log("Séléction de la tourelle Electrique !!");
+        buildManager.SelectTurretToBuild(ElectriqueBeamerTurrette);
+        Instantiate(GoshtElectriquebeamer);
+
     }
     public void SelectMine()
     {

@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2411513413632
-    m_Localized: "Niveau gagn\xE9"
+    m_Localized: Niveau gagnier
     m_Metadata:
       m_Items: []
   - m_Id: 7350943744
@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 897784905728
-    m_Localized: "R\xE9essayer"
+    m_Localized: Reessayer
     m_Metadata:
       m_Items: []
   - m_Id: 1096674607104
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1276782215168
-    m_Localized: "Vagues surv\xE9cu"
+    m_Localized: Vagues survecu
     m_Metadata:
       m_Items: []
   - m_Id: 2246551437312

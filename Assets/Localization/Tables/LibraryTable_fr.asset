@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LibraryTable_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 930174c5b7f9bb54782d0088c8d52105, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8491794432
+    m_Localized: "Tourelle de defense Artilleur S-ONE :\r\n\r\nSysteme de protection
+      de base de la Synthesis. Ces tourelles sont adaptees pour tout type d\u2019environnement
+      afin d\u2019assurer la protection des differents campements."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169930555392
+    m_Localized: "Tourelle de defense Balistique S-22 :\r\n\r\nMalgre son systeme
+      de defense assez commun, la S-22 beneficie de munitions sophistiquees permettant
+      l'aneantissement des troupes ennemies grace a leur champ d\u2019action plus
+      etendu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467382206464
+    m_Localized: "Tourelle de defense IEM S-106 :\r\n\r\nCet appareil de pointe,
+      compose principalement de carbone et de cuivre, projette de nombreuses impulsions
+      \xE9lectromagn\xE9tiques a l\u2019aide de sa bobine Tesla dernier cri, afin
+      de d\xE9stabiliser et ralentir les ennemis proches."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295881310208
+    m_Localized: "Tourelle de defense Laser S-713 :\r\n\r\nDotee d\u2019un puissant
+      systeme de concentration lumineuse, cette tourelle puise en partie son energie
+      des \xE9toiles pour canaliser et emettre un laser sur les ennemis, infligeant
+      des degats croissants."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27055637299200
+    m_Localized: "Drone terrestre \u201CStealth\u201D :\r\n\r\nCe petit drone furtif
+      constitue la plus grande partie de l\u2019arm\xE9e de la Gaia HSC. Afin d\u2019exploiter
+      le plus de territoire possible, cette machine a \xE9t\xE9 con\xE7ue pour naviguer
+      dans tout type d'environnement."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27191960567808
+    m_Localized: "Cuirasse \u201CMastock\u201D :\r\n\r\nDote d\u2019un triple canon
+      rotatif et d\u2019une robuste armature en titane, cette machine de guerre a
+      pour but d\u2019aneantir tout ennemi se trouvant sur son chemin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27308356698112
+    m_Localized: "Eclaireur \u201CDNT (Did not see)\u201D :\r\n\r\nRapide et efficace
+      sont les maitres mots de ce vehicule motorise ayant une grande port\xE9e de
+      tir et une vitesse de d\xE9placement suffisante pour echapper a certains radars."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27412417380352
+    m_Localized: "Char \u201CThe Savior\u201D :\r\n\r\nCe char d\u2019assaut lourd
+      mais puissant est une des principales forces d\u2019attaque de l\u2019armee
+      de la Gaia HSC, une aide tres utile lors d'assauts et les sieges de bases ennemies.
+      \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27542654713856
+    m_Localized: "Supercanon \u201CL\u2019Excavateur\u201D\r\n\r\nCe convoit unique
+      en son genre a ete nomme ainsi en raison de sa puissance de tir devastatrice
+      pouvant a pleine puissance raser une ville entiere. Sa batterie arri\xE8re
+      au fonctionnant au Maven contribue grandement a cet apport de puissance."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

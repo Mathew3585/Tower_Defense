@@ -27,13 +27,13 @@ EditorBuildSettings:
     path: Assets/Map/Level 1.unity
     guid: 7ffa93981d4d130438f38bd2b528ed2e
   - enabled: 1
-    path: Assets/Map/Level 2.unity
+    path: Assets/Map/Level 4.unity
     guid: 3098ec17a506caf4da7727be23e26a00
   - enabled: 1
     path: Assets/Map/Level 3.unity
     guid: 69caec6148ba83d4886bcbe1dbe33aca
   - enabled: 1
-    path: Assets/Map/Level 4.unity
+    path: Assets/Map/Level 2.unity
     guid: 1b9d2322475ff9c41852f3e587df4644
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b1ee7bdff7191cf48bfa3d508657a2f7,

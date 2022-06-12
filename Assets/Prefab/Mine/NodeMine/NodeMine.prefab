@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1799747302323747697}
   - component: {fileID: 670847268119301213}
   - component: {fileID: 1500636525557972023}
+  - component: {fileID: 3027674829253491236}
   m_Layer: 13
   m_Name: NodeMine
   m_TagString: NodeMine
@@ -59,6 +60,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e04c13129a20164ab4d21b1a9bbe5e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3027674829253491236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910073450106165591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3537e34566d37a4594412b15c6ec6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  NoEnoughtMoneyColor: {r: 0, g: 0, b: 0, a: 0}
+  PositionsOffset: {x: 0, y: 0, z: 0}
+  Mine: {fileID: 0}
+  mineBleuprint:
+    prefab: {fileID: 0}
+    cost: 0
+  isUpgraded: 0
+  useLaser: 0
 --- !u!1 &3515274558776174817
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,9 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4288292413126095451}
-  - component: {fileID: 8572314526582941066}
-  - component: {fileID: 4610389298422489529}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Socle
   m_TagString: NodeMine
   m_Icon: {fileID: 0}
@@ -92,37 +112,3 @@ Transform:
   m_Father: {fileID: 1799747302323747697}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8572314526582941066
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3515274558776174817}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.25, y: 34.11, z: 6.25}
-  m_Center: {x: 0, y: 14.3, z: 0}
---- !u!114 &4610389298422489529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3515274558776174817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3537e34566d37a4594412b15c6ec6fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  NoEnoughtMoneyColor: {r: 0, g: 0, b: 0, a: 0}
-  PositionsOffset: {x: 0, y: 0, z: 0}
-  Mine: {fileID: 0}
-  mineBleuprint:
-    prefab: {fileID: 0}
-    cost: 0
-  isUpgraded: 0
-  useLaser: 0

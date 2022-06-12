@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LibraryTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 930174c5b7f9bb54782d0088c8d52105, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8491794432
+    m_Localized: 'S-ONE Gunner Defence Turret:
+
+
+
+      The basic protection system
+      of the Synthesis. These turrets are adapted for all types of environment in
+      order to ensure the protection of the various camps.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169930555392
+    m_Localized: 'S-22 Ballistic Defence Turret:
+
+
+
+      Despite its fairly common
+      defence system, the S-22 benefits from sophisticated ammunition allowing the
+      annihilation of enemy troops thanks to their wider range.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295881310208
+    m_Localized: 'S-713 Laser Defence Turret:
+
+
+
+      Featuring a powerful light
+      concentration system, this turret draws some of its energy from the stars to
+      channel and emit a laser at enemies, inflicting increasing damage.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467382206464
+    m_Localized: 'S-106 EMI Defence Turret:
+
+
+
+      This state-of-the-art device,
+      made primarily of carbon and copper, projects numerous electromagnetic pulses
+      through its state-of-the-art Tesla coil to destabilise and slow down nearby
+      enemies.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27055637299200
+    m_Localized: 'Stealth" ground drone:
+
+      
+
+      This small stealth drone
+      is the largest part of the Gaia HSC army. In order to exploit as much territory
+      as possible, this machine has been designed to navigate in any type of environment.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27191960567808
+    m_Localized: 'Mastock" armour:
+
+      
+
+      Equipped with a triple rotating
+      cannon and a sturdy titanium frame, this war machine is designed to annihilate
+      any enemy in its path.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27308356698112
+    m_Localized: 'DNT (Did not see) scout:
+
+      
+
+      Fast and efficient are
+      the key words of this motorised vehicle with a great range and a speed of movement
+      sufficient to escape some radars.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27412417380352
+    m_Localized: "The Savior\" tank:\r\n\r\nThis heavy but powerful tank is one of
+      the main attack forces of the Gaia HSC army, a very useful aid in assaults
+      and sieges of enemy bases. \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27542654713856
+    m_Localized: 'Supercanon "The Excavator
+
+      
+
+      This unique convoy was
+      named for its devastating firepower, which at full power can level an entire
+      city. Its rear Maven battery contributes greatly to this power.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

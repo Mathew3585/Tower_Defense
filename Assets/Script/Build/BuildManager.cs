@@ -88,6 +88,7 @@ public class BuildManager : MonoBehaviour
     public void SelectedNodeMine(NodeMine nodemine)
     {
 
+        Debug.Log("Ok Mine select");
         if (nodemine == selectedNodeMine)
         {
             DeselecetNode();

@@ -22,17 +22,18 @@ public class TutoManagerTuto : MonoBehaviour
     [Header("List Audio"), Tooltip("Cette Variable permet de renseigner la List Audio")]
     public List<AudioClip> ListAudio;
     private float _timer = 0;
-    public Button ShopTurret;
-    public Button UpagradeButton;
-    public bool ShopCilck;
-    public bool UpagradeClick;
+    public Button button;
+    public Button Upagradebutton;
+    public bool Shopclick;
+    public bool UpagradClick;
+    public GameObject UiWin;
     public WaveSpawnerTuto waveSpawner;
 
     //Sart du jeu 
     public void Start()
     {
-        ShopTurret.onClick.AddListener(() => ShopCilck = true);
-        //UpagradeButton.onClick.AddListener(() => UpagradeClick = true);
+        button.onClick.AddListener(() => Shopclick = true);
+        Upagradebutton.onClick.AddListener(() => UpagradClick = true);
         _timer += Time.deltaTime;
         gameManager.SetActive(false);
         ClickMouseBlocker.SetActive(true);
@@ -116,20 +117,19 @@ public class TutoManagerTuto : MonoBehaviour
                 SpectrumScript.instance.StartAudio(ListAudio[3]);
             }
         }
-        else if (popUpIndex == 3 && ShopCilck)
+        else if (popUpIndex == 3 && Shopclick)
         {
-            ShopCilck = false;
             _timer = 0;
             popUpIndex++;
             SpectrumScript.instance.StartAudio(ListAudio[4]);
         }
-        else if (popUpIndex == 4 && ShopCilck)
+        else if (popUpIndex == 4 && UpagradClick)
         {
-            ShopCilck = false;
             popUpIndex++;
             _timer = 0;
             gameManager.SetActive(false);
             SpectrumScript.instance.StartAudio(ListAudio[5]);
+
         }
         else if (popUpIndex == 5 )
         {
@@ -138,24 +138,9 @@ public class TutoManagerTuto : MonoBehaviour
                 _timer = 0;
                 popUpIndex++;
                 SpectrumScript.instance.StartAudio(ListAudio[6]);
+                UiWin.SetActive(true);
             }
 
-        }
-        else if (popUpIndex == 6)
-        {
-            _timer = 0;
-            popUpIndex++;
-            SpectrumScript.instance.StartAudio(ListAudio[7]);
-        }
-        else if (popUpIndex == 7)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                _timer = 0;
-                popUpIndex++;
-                SpectrumScript.instance.StartAudio(ListAudio[8]);
-                tutoManager.SetActive(false);
-            }
         }
     }
 

@@ -7,8 +7,7 @@ public class MoveWithMouse : MonoBehaviour
     public Transform target;
     public float speed;
     Camera cam;
-    public bool collions;
-
+    public LayerMask mask;
     void Start()
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -17,40 +16,34 @@ public class MoveWithMouse : MonoBehaviour
 
     void Update()
     {
-        if (collions)
+        Debug.Log(target);
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 100f;
+        mousePos = cam.ScreenToWorldPoint(mousePos);
+        Debug.DrawRay(transform.position, mousePos - transform.position, Color.green);
+
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit,100,mask))
         {
-            Vector3 a = transform.position;
+            target = hit.transform;
+            Debug.Log(target);
+            Vector3 a = gameObject.transform.position;
             Vector3 b = target.position;
-            transform.position = Vector3.Lerp(a, b, speed);
-            Debug.Log(target.position);
-            Debug.Log(transform.position);
+            gameObject.transform.position = Vector3.Lerp(a, b, speed);
+
         }
-        else if (!collions)
+        else
         {
             transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5));
+            target = null;
         }
 
-
-        
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("ok");
-        if (collision.gameObject.tag == "Node")
+        if (Input.GetMouseButtonDown(0))
         {
-            target = collision.gameObject.transform;
-            Debug.Log("ok");
-            collions = true;
-            NodeGosht nodez = collision.gameObject.GetComponent<NodeGosht>();
-            nodez.Setup(() => collions = false);
+            Destroy(gameObject);
         }
-    }
-
-
-
-    private void OnMouseDown()
-    {
-        Destroy(gameObject);
     }
 }
