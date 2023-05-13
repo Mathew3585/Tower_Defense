@@ -1,12 +1,3 @@
-
-
-https://github.com/Mathew3585/Tower_Defense/assets/68810417/1b81e108-697e-42c9-a592-3103ad502b8e
-
-
-
-Uploading Project Machina.mp4…
-
-
 ![Logo](https://github.com/Mathew3585/Tower_Defense/blob/main/Assets/Ui/Logo/Logonom.png?raw=true)
 
 
@@ -27,7 +18,13 @@ Overall, Project Machina is an exciting and challenging Tower Defense game that 
 
 ## Demo
 
-[![Tower_Defense](https://img.youtube.com/vi/HbNJB3Qf0lY)](https://www.youtube.com/watch?v=HbNJB3Qf0lY)
+
+
+https://github.com/Mathew3585/Tower_Defense/assets/68810417/1b81e108-697e-42c9-a592-3103ad502b8e
+
+
+
+Uploading Project Machina.mp4…
 
 
 ## Screenshots
